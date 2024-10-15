@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Захиалга хийх форм, НӨАТ авах төрөл, төлбөрийн сонголт, сагс дахь бүтээгдэхүүн">
+  <title>Захиалга</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+          <li><a href="home.html">Нүүр</a></li>
+          <li><a href="sanalhuselt.html">Холбоо барих</a></li>
+      </ul>
+  </nav>
+  </header>
+  <section class="main-container">
+
+    <!-- Зүүн багана -->
+    <section class="left-column">
+
+      <!-- Захиалагчийн мэдээлэл -->
+      <section class="customer-info">
+        <h3>Захиалагчийн мэдээлэл</h3>
+        <div class="grid-container">
+          <article>
+            <label for="name">Овог, Нэр:</label>
+            <input type="text" id="name" name="name" placeholder="Овог, Нэрээ оруулна уу" required>
+          </article>
+          <article>
+            <label for="email">И-мэйл хаяг:</label>
+            <input type="email" id="email" name="email" placeholder="И-мэйл хаягаа оруулна уу" required>
+          </article>
+          <article>
+            <label for="phone1">Утасны дугаар 1:</label>
+            <input type="tel" id="phone1" name="phone1" placeholder="Утасны дугаараа оруулна уу" required>
+          </article>
+          <article>
+            <label for="phone2">Утасны дугаар 2:</label>
+            <input type="tel" id="phone2" name="phone2" placeholder="Хоёр дахь дугаараа оруулна уу (заавал биш)">
+          </article>
+        </div>
+      </section>
+
+      <!-- НӨАТ авах төрөл -->
+      <section class="noat">
+        <label for="vat">НӨАТ авах төрөл:</label>
+        <select id="vat" name="vat" required>
+          <option value="individual">Хувь хүн</option>
+          <option value="organization">Байгууллага</option>
+        </select>
+      </section>
+
+      <!-- Салбар сонгох -->
+      <section class="branch-selection">
+        <article>
+          <h3>Салбар сонгох</h3>
+          <label for="salbar">Салбар сонгох:</label>
+          <select id="salbar" name="salbar" required>
+            <option value="salbar1">Салбар 1</option>
+            <option value="salbar2">Салбар 2</option>
+            <option value="salbar3">Салбар 3</option>
+            <option value="salbar4">Салбар 4</option>
+            <option value="salbar5">Салбар 5</option>
+          </select>
+        </article>
+      </section>
+
+      <!-- Төлбөр төлөх хэлбэр -->
+      <section class="payment-methods">
+        <article>
+          <h3>Төлбөр төлөх хэлбэр</h3>
+          <label for="payment-cash">
+            <input type="radio" id="payment-cash" name="payment" value="cash" required> Бэлэн мөнгө
+          </label>
+        </article>
+        <article>
+          <label for="payment-card">
+            <input type="radio" id="payment-card" name="payment" value="card" required> Карт (Credit/Debit)
+          </label>
+        </article>
+      </section>
+
+    </section>
+
+    <!-- Баруун багана -->
+    <section class="right-column">
+
+      <!-- Нэмэлт тэмдэглэл -->
+      <section class="additional-notes">
+        <article>
+          <h3>Нэмэлт тэмдэглэл</h3>
+          <label for="notes">Тэмдэглэл:</label>
+          <textarea id="notes" name="notes" placeholder="Захиалгатай холбоотой мэдээлэл оруулна уу" rows="4"></textarea>
+        </article>
+      </section>
+
+      <!-- Сагс -->
+      <section class="sags">
+        <article>
+          <h3>Таны сагс</h3>
+          <label for="cart-items">Сагсанд хийсэн бүтээгдэхүүн:</label>
+          <button id="view-cart-btn">Сагс харах</button>
+        </article>
+      </section>
+
+      <!-- Захиалга -->
+      <section class="zahialga">
+        <article>
+          <h3>Захиалга</h3>
+          <label for="dun">Нийт дүн:</label>
+          <input type="text" id="dun" name="Нийт дүн" placeholder="₮0.00" required readonly>
+        </article>
+        <article>
+          <label for="coupon">Купон ашиглах:</label>
+          <input type="text" id="coupon" name="coupon" placeholder="Купон код оруулна уу">
+          <button type="button">Купон ашиглах</button>
+        </article>
+      </section>
+
+      <!-- Үйлчилгээний нөхцөл зөвшөөрөх -->
+        <section class="terms-and-conditions">
+          <input type="checkbox" id="terms" name="terms" required>
+          <label for="terms">Би <a href="uilchilgee.html">үйлчилгээний нөхцөлийг</a> хүлээн зөвшөөрч байна.</label>
+        <button type="submit">Захиалах</button>
+      </section>
+
+    </section>
+  </section>
+</body>
+</html>
