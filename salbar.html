@@ -3,111 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Logo</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Танилцуулга</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Бүтээгдэхүүн</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Урамшуулал</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Салбарын мэдээлэл</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Захиалга</a>
-              </li>
-            </ul>
-          </div>
-      </nav>
+    <title>Document</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .card {
+            width: 300px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            text-align: center;
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .card h3 {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .card p {
+            margin-top: 5px;
+            font-size: 0.9rem;
+        }
+        .card .info {
+            margin-top: 10px;
+        }
+        .card .info span {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.8rem;
+        }
+        /* Google Map container */
+        .map-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
-    <div>
-      <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-          <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Бүтээгдэхүүний нэр</h5>
-              <p class="card-text">Бүтээгдэхүүний мэдээлэл</p>
-            </div>
-            <div class="card-footer">
-              <small class="text-body-secondary">Нэмэлт мэдээлэл</small>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Бүтээгдэхүүний нэр</h5>
-              <p class="card-text">Бүтээгдэхүүний мэдээлэл</p>
-            </div>
-            <div class="card-footer">
-              <small class="text-body-secondary">Нэмэлт мэдээлэл</small>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Бүтээгдэхүүний нэр</h5>
-              <p class="card-text">Бүтээгдэхүүний мэдээлэл</p>
-            </div>
-            <div class="card-footer">
-              <small class="text-body-secondary">Нэмэлт мэдээлэл</small>
-            </div>
-          </div>
-        </div>
-      </div>
+    <section>
+        <h2 style="text-align: center; margin-bottom: 20px;">САЛБАРЫН МЭДЭЭЛЭЛ</h2>
+        <div class="container">
+            <article class="card">
+                <img src="https://i.imgur.com/l5Q0hKz.jpg" alt="Хүүхдийн 100">
+                <h3>Хүүхдийн 100</h3>
+                <p>Салбар 1</p>
+            </article>
+            <article class="card">
+              <img src="https://i.imgur.com/l5Q0hKz.jpg" alt="Хүүхдийн 100">
+              <h3>Хүүхдийн 100</h3>
+              <p>Салбар 2</p>
+          </article>  <article class="card">
+            <img src="https://i.imgur.com/l5Q0hKz.jpg" alt="Хүүхдийн 100">
+            <h3>Хүүхдийн 100</h3>
+            <p>Салбар 3</p>
+        </article>  <article class="card">
+          <img src="https://i.imgur.com/l5Q0hKz.jpg" alt="Хүүхдийн 100">
+          <h3>Хүүхдийн 100</h3>
+          <p>Салбар 4</p>
+      </article>  <article class="card">
+        <img src="https://i.imgur.com/l5Q0hKz.jpg" alt="Хүүхдийн 100">
+        <h3>Хүүхдийн 100</h3>
+        <p>Салбар 5</p>
+    </article>
+    </section>
+
+    <!-- Google Map Embed -->
+    <div class="map-container">
+        <h3>Хүүхдийн 100 Байршил</h3>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2681.9589651864143!2d106.91340831545534!3d47.917418879208826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5d96922d08e38b07%3A0x30984986bcbcf4c4!2z0K3Qu9C40L3QvtCy0LjRgNCwIDAwLCDQodC10LLQtdC5IC0g0KPQvtGA0LDQvdC40YfQvdGW0L3QutCwINC60LjQu9C90LjQvdC40LUg0Lgg0LrQvtGA0YPQutCwLCDQntC90LAg0LTQtdC90L7QvNC40YLRjA!5e0!3m2!1sen!2smn!4v1697367956629!5m2!1sen!2smn" 
+            width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
     </div>
 </body>
-<footer>
-  <div>
-      <h5>Solutions</h5>
-      <ul>
-          <li><a href="#">Marketing</a></li>
-          <li><a href="#">Analytics</a></li>
-          <li><a href="#">Commerce</a></li>
-          <li><a href="#">Insights</a></li>
-      </ul>
-  </div>
-  <div>
-      <h5>Support</h5>
-      <ul>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">Documentation</a></li>
-          <li><a href="#">Guides</a></li>
-          <li><a href="#">API Status</a></li>
-      </ul>
-  </div>
-  <div>
-      <h5>Company</h5>
-      <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Jobs</a></li>
-          <li><a href="#">Press</a></li>
-          <li><a href="#">Partners</a></li>
-      </ul>
-  </div>
-  <div>
-      <h5>Legal</h5>
-      <ul>
-          <li><a href="#">Claim</a></li>
-          <li><a href="#">Privacy</a></li>
-          <li><a href="#">Terms</a></li>
-      </ul>
-  </div>
-</footer>
 </html>
