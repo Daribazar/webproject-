@@ -3,115 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Logo</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Танилцуулга</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Бүтээгдэхүүн</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Урамшуулал</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Салбарын мэдээлэл</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Захиалга</a>
-              </li>
-            </ul>
-          </div>
-      </nav>
+    <title>Бүтээгдэхүүний жагсаалт</title>
+    <!-- Bootstrap CSS холбоос нэмэх хэрэгтэй -->
 </head>
 <body>
-    <div>
-      <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-          <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Бүтээгдэхүүний нэр</h5>
-              <p class="card-text">Бүтээгдэхүүний мэдээлэл</p>
-            </div>
-            <div class="card-footer">
-              <small class="text-body-secondary">Нэмэлт мэдээлэл</small>
-            </div>
-          </div>
+    <!-- Хуучин navbar кодыг устгаж, шинэ цэсийг нэмэв -->
+    <div class="sidebar">
+        <h2>АНГИЛАЛ</h2>
+        <ul>
+            <li><a href="#">ТАЛХ</a></li>
+            <li><a href="#">БЯЛУУ</a></li>
+            <li><a href="#">САЛАТ / СЭНДВИЧ</a></li>
+            <li><a href="#">БЭЛЭГ</a></li>
+            <li><a href="#">ДЕССЕРТ</a></li>
+            <li><a href="#">УУХ ЗҮЙЛС</a></li>
+        </ul>
+        <div class="additional-menu">
+            <h3>ХҮРГЭЛТИЙН НӨХЦӨЛ & ҮЙЛЧИЛГЭЭНИЙ НӨХЦӨЛ</h3>
         </div>
-        <div class="col">
-          <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Бүтээгдэхүүний нэр</h5>
-              <p class="card-text">Бүтээгдэхүүний мэдээлэл</p>
-            </div>
-            <div class="card-footer">
-              <small class="text-body-secondary">Нэмэлт мэдээлэл</small>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Бүтээгдэхүүний нэр</h5>
-              <p class="card-text">Бүтээгдэхүүний мэдээлэл</p>
-            </div>
-            <div class="card-footer">
-              <small class="text-body-secondary">Нэмэлт мэдээлэл</small>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
+
+    <!-- Бүтээгдэхүүний жагсаалтыг шинэчлэв -->
+    <div class="product-list">
+        <a href="index.html" class="product-link">
+            <div class="product-item">
+                <img src="path/to/matcha-cookie-brownie.jpg" alt="Matcha Cookie Brownie">
+                <h3>MATCHA COOKIE BROWNIE</h3>
+                <span class="category">Дессерт</span>
+                <p>Орео жигнэмэгтэй матча бровни. Матчаны сэргээх амт, шоколадны тааламжит амтыг Матча бровнигоос мэдрээрэй. Халуун кофетой хамгийн их тохирно.</p>
+            </div>
+        </a>
+
+        <a href="index.html" class="product-link">
+            <div class="product-item">
+                <img src="path/to/matcha-cookie-brownie-small.jpg" alt="Matcha Cookie Brownie">
+                <h3>MATCHA COOKIE BROWNIE</h3>
+                <span class="category">Дессерт</span>
+            </div>
+        </a>
+
+        <a href="index.html" class="product-link">
+            <div class="product-item">
+                <img src="path/to/matcha-layer-pastry.jpg" alt="Matcha Layer Pastry">
+                <h3>MATCHA LAYER PASTRY</h3>
+                <span class="category">Талх</span>
+            </div>
+        </a>
+
+        <a href="index.html" class="product-link">
+            <div class="product-item">
+                <img src="path/to/all-star-cake.jpg" alt="All Star Cake">
+                <h3>ALL STAR CAKE</h3>
+                <span class="category">Бялуу</span>
+            </div>
+        </a>
+
+        <a href="index.html" class="product-link">
+            <div class="product-item">
+                <img src="path/to/tuna-corn-mayonnaise-bread.jpg" alt="Tuna Corn Mayonnaise Bread">
+                <h3>TUNA CORN MAYONNAISE BREAD</h3>
+                <span class="category">Талх</span>
+            </div>
+        </a>
+    </div>
+
+    <!-- Footer хэсгийг устгав -->
 </body>
-<footer>
-  <div>
-      <h5>Solutions</h5>
-      <ul>
-          <li><a href="#">Marketing</a></li>
-          <li><a href="#">Analytics</a></li>
-          <li><a href="#">Commerce</a></li>
-          <li><a href="#">Insights</a></li>
-      </ul>
-  </div>
-  <div>
-      <h5>Support</h5>
-      <ul>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">Documentation</a></li>
-          <li><a href="#">Guides</a></li>
-          <li><a href="#">API Status</a></li>
-      </ul>
-  </div>
-  <div>
-      <h5>Company</h5>
-      <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Jobs</a></li>
-          <li><a href="#">Press</a></li>
-          <li><a href="#">Partners</a></li>
-      </ul>
-  </div>
-  <div>
-      <h5>Legal</h5>
-      <ul>
-          <li><a href="#">Claim</a></li>
-          <li><a href="#">Privacy</a></li>
-<<<<<<< HEAD
-          <li><a href="index.html">delgerengui</a></li>
-=======
-          <li><a href="#">Terms</a></li>
->>>>>>> origin/main
-      </ul>
-  </div>
-</footer>
 </html>
