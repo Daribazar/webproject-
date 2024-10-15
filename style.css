@@ -1,0 +1,109 @@
+:root {
+  --main-bg-color: #ffffff;
+  --secondary-bg-color: #f9f9f9;
+  --border-color: #ddd;
+  --primary-color: #ef7ad4;
+  --text-color: #333;
+  --hover-color: rgba(239, 122, 212, 0.8);
+  --shadow-color: rgba(0, 0, 0, 0.05);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--main-bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 20px;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px; /* Багануудын хоорондох зайг нэмэгдүүлсэн */
+}
+
+section {
+  background-color: var(--secondary-bg-color);
+  border: none; /* Хүрээг устгасан */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 1px 3px var(--shadow-color); /* Сүүдрийг зөөлөн болгосон */
+}
+
+h3 {
+  color: var(--primary-color);
+  margin: 0 0 15px 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #eee; /* Илүү гэрэлтэй хүрээ */
+  border-radius: 4px;
+  margin-bottom: 15px;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--primary-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--hover-color);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+article {
+  padding: 15px;
+}
+
+.terms-and-conditions {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px; /* Доод талд нэмэлт зай нэмсэн */
+}
+
+.terms-and-conditions input {
+  margin-right: 10px;
+}
+
+.terms-and-conditions button {
+  margin-left: auto; /* Бутлуурын зүүн талд зайг нэмэх */
+  padding: 10px 20px; /* Товчны доторх зайг нэмэгдүүлсэн */
+  font-size: 16px; /* Товчны текстийн хэмжээг нэмэгдүүлсэн */
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    grid-template-columns: 1fr;
+  }
+}
