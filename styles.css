@@ -139,6 +139,8 @@ header {
   text-decoration: none;
   border-radius: 4px;
   transition: background-color var(--transition-speed);
+  margin-top: 90px;
+  margin-left: 400px;
 }
 
 .btn:hover {
