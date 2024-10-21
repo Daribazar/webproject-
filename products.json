@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "name": "Matcha Cookie Brownie",
+        "category": "Dessert",
+        "brand": "Cafe Delights",
+        "price": 10,
+        "image": "https://via.placeholder.com/150",
+        "description": "Орео жигнэмэгтэй матча бровни."
+    },
+    {
+        "id": 2,
+        "name": "All Star Cake",
+        "category": "Cake",
+        "brand": "Delicious Cakes",
+        "price": 20,
+        "image": "https://via.placeholder.com/150",
+        "description": "Шинэхэн жимс, амтат шоколадаар хийгдсэн бялуу."
+    },
+    {
+        "id": 3,
+        "name": "Tuna Corn Mayonnaise Bread",
+        "category": "Bread",
+        "brand": "Bakery Fresh",
+        "price": 5,
+        "image": "https://via.placeholder.com/150",
+        "description": "Туна, корн, майонезын хачиртай талх."
+    },
+    {
+        "id": 4,
+        "name": "Fruit Salad",
+        "category": "Salad",
+        "brand": "Healthy Life",
+        "price": 8,
+        "image": "https://via.placeholder.com/150",
+        "description": "Шинэхэн жимсний хольц."
+    },
+    {
+        "id": 5,
+        "name": "Gourmet Pizza",
+        "category": "Food",
+        "brand": "Pizzeria",
+        "price": 15,
+        "image": "https://via.placeholder.com/150",
+        "description": "Бялуу зоогийн пицца."
+    }
+]
