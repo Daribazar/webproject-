@@ -84,10 +84,11 @@ header {
 }
 
 .product-image {
-  width: 400px;
+  width: 50%;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-right: 2rem;
 }
 
 /* Description styles */
