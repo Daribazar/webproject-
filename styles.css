@@ -77,14 +77,14 @@ header {
 
 /* Product overview styles */
 .product-overview {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  /* grid-template-columns: 1fr 1fr; */
   gap: 2rem;
   margin-bottom: 2rem;
 }
 
 .product-image {
-  width: 100%;
+  width: 400px;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
