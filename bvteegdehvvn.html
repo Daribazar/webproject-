@@ -3,70 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Бүтээгдэхүүний жагсаалт</title>
-    <!-- Bootstrap CSS холбоос нэмэх хэрэгтэй -->
+    <title>Бүтээгдэхүүний Жагсаалт</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Хуучин navbar кодыг устгаж, шинэ цэсийг нэмэв -->
-    <div class="sidebar">
-        <h2>АНГИЛАЛ</h2>
-        <ul>
-            <li><a href="#">ТАЛХ</a></li>
-            <li><a href="#">БЯЛУУ</a></li>
-            <li><a href="#">САЛАТ / СЭНДВИЧ</a></li>
-            <li><a href="#">БЭЛЭГ</a></li>
-            <li><a href="#">ДЕССЕРТ</a></li>
-            <li><a href="#">УУХ ЗҮЙЛС</a></li>
-        </ul>
-        <div class="additional-menu">
-            <h3>ХҮРГЭЛТИЙН НӨХЦӨЛ & ҮЙЛЧИЛГЭЭНИЙ НӨХЦӨЛ</h3>
+    <div class="container">
+        <h1>Бүтээгдэхүүний Жагсаалт</h1>
+        <div class="filter">
+            <label for="category">Ангилал:</label>
+            <select id="category" onchange="filterProducts()">
+                <option value="all">Бүгд</option>
+                <option value="Dessert">Дессерт</option>
+                <option value="Cake">Бялуу</option>
+                <option value="Bread">Талх</option>
+                <option value="Salad">Салат</option>
+                <option value="Food">Хоол</option>
+            </select>
         </div>
+        <div class="product-list" id="product-list"></div>
     </div>
 
-    <!-- Бүтээгдэхүүний жагсаалтыг шинэчлэв -->
-    <div class="product-list">
-        <a href="index.html" class="product-link">
-            <div class="product-item">
-                <img src="path/to/matcha-cookie-brownie.jpg" alt="Matcha Cookie Brownie">
-                <h3>MATCHA COOKIE BROWNIE</h3>
-                <span class="category">Дессерт</span>
-                <p>Орео жигнэмэгтэй матча бровни. Матчаны сэргээх амт, шоколадны тааламжит амтыг Матча бровнигоос мэдрээрэй. Халуун кофетой хамгийн их тохирно.</p>
-            </div>
-        </a>
-
-        <a href="index.html" class="product-link">
-            <div class="product-item">
-                <img src="path/to/matcha-cookie-brownie-small.jpg" alt="Matcha Cookie Brownie">
-                <h3>MATCHA COOKIE BROWNIE</h3>
-                <span class="category">Дессерт</span>
-            </div>
-        </a>
-
-        <a href="index.html" class="product-link">
-            <div class="product-item">
-                <img src="path/to/matcha-layer-pastry.jpg" alt="Matcha Layer Pastry">
-                <h3>MATCHA LAYER PASTRY</h3>
-                <span class="category">Талх</span>
-            </div>
-        </a>
-
-        <a href="index.html" class="product-link">
-            <div class="product-item">
-                <img src="path/to/all-star-cake.jpg" alt="All Star Cake">
-                <h3>ALL STAR CAKE</h3>
-                <span class="category">Бялуу</span>
-            </div>
-        </a>
-
-        <a href="index.html" class="product-link">
-            <div class="product-item">
-                <img src="path/to/tuna-corn-mayonnaise-bread.jpg" alt="Tuna Corn Mayonnaise Bread">
-                <h3>TUNA CORN MAYONNAISE BREAD</h3>
-                <span class="category">Талх</span>
-            </div>
-        </a>
-    </div>
-
-    <!-- Footer хэсгийг устгав -->
+    <script type="module" src="script.js"></script>
 </body>
 </html>
