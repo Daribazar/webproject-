@@ -6,6 +6,30 @@
   <meta name="description" content="Захиалга хийх форм, НӨАТ авах төрөл, төлбөрийн сонголт, сагс дахь бүтээгдэхүүн">
   <title>Захиалга</title>
   <link rel="stylesheet" href="style.css">
+  <script>
+    
+    function validateForm() {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const phone1 = document.getElementById('phone1').value;
+      const vat = document.getElementById('vat').value;
+      const salbar = document.getElementById('salbar').value;
+      const payment = document.querySelector('input[name="payment"]:checked');
+      const terms = document.getElementById('terms').checked;
+
+      if (name === "" || email === "" || phone1 === "" || vat === "" || salbar === "" || !payment || !terms) {
+        alert("Та бүх шаардлагатай мэдээллийг оруулна уу.");
+        return false;
+      }
+      
+    
+      alert("Захиалга амжилттай илгээгдлээ!");
+      
+      
+      window.location.href = "zahialganext.html";
+      return true;
+    }
+  </script>
 </head>
 <body>
   <header>
@@ -14,7 +38,7 @@
           <li><a href="home.html">Нүүр</a></li>
           <li><a href="sanalhuselt.html">Холбоо барих</a></li>
       </ul>
-  </nav>
+    </nav>
   </header>
   <section class="main-container">
 
@@ -121,10 +145,10 @@
       </section>
 
       <!-- Үйлчилгээний нөхцөл зөвшөөрөх -->
-        <section class="terms-and-conditions">
-          <input type="checkbox" id="terms" name="terms" required>
-          <label for="terms">Би <a href="uilchilgee.html">үйлчилгээний нөхцөлийг</a> хүлээн зөвшөөрч байна.</label>
-        <button type="submit">Захиалах</button>
+      <section class="terms-and-conditions">
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">Би <a href="uilchilgee.html">үйлчилгээний нөхцөлийг</a> хүлээн зөвшөөрч байна.</label>
+        <button type="button" onclick="validateForm()">Захиалах</button>
       </section>
 
     </section>
