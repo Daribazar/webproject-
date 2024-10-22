@@ -1,102 +1,161 @@
-//sanal  huselt html batmyagmar
 <!DOCTYPE html>
 <html lang="mn">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Санал хүсэлт илгээх хэсэг: Нэр, холбоо барих мэдээлэл, одны үнэлгээ, болон санал хүсэлтээ илгээнэ үү.">
+  <meta name="description" content="Санал хүсэлт илгээх хэсэг: Нэр, холбоо барих мэдээлэл, санал хүсэлтээ илгээнэ үү.">
   <title>Санал хүсэлт</title>
   <link rel="stylesheet" href="style1.css">
   <style>
-    /* Одыг урдаас нь шарлуулах CSS */
+    :root {
+      --main-bg-color: #ffffff;
+      --secondary-bg-color: #f9f9f9;
+      --border-color: #555555; /* Darker border for better contrast */
+      --primary-color: #d23695; /* Darker pink for better readability */
+      --text-color: #222222; /* Darker text color for improved contrast */
+      --hover-color: rgba(210, 54, 149, 0.8); /* Adjusted hover color */
+      --shadow-color: rgba(0, 0, 0, 0.15); /* Slightly darker shadow */
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      background-color: var(--main-bg-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    .container {
+      background-color: var(--secondary-bg-color);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      box-shadow: 0 2px 5px var(--shadow-color);
+      width: 100%;
+      max-width: 500px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h2 {
+      color: var(--primary-color);
+      margin-bottom: 15px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+      text-align: left;
+      color: var(--text-color); /* Ensure label text is clear */
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      margin-bottom: 15px;
+      transition: border-color 0.3s;
+      color: var(--text-color); /* Input text color */
+      background-color: var(--secondary-bg-color); /* Input background matches the form */
+    }
+    
+    input[type="text"]:focus,
+    textarea:focus {
+      border-color: var(--primary-color);
+    }
+    
+    button {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      padding: 10px 15px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: var(--hover-color);
+    }
+
     .stars {
       display: flex;
-      direction: row; /* Зүүнээс баруун руу */
+      justify-content: center;
+      align-items: center;
+      gap: 10px; /* Space between stars */
+      margin-top: 10px;
     }
 
-    .stars input {
-      display: none; /* Радио товчнуудыг нуух */
+    .star-box {
+      border: 2px solid var(--border-color); /* Darker border for better visibility */
+      padding: 10px;
+      border-radius: 8px;
+      display: inline-block;
+      width: fit-content; /* Ensures the star box adjusts its size to content */
+      margin: 0 auto; /* Centers the box in the container */
+      background-color: var(--secondary-bg-color); /* Keep consistent with page style */
     }
 
+    .stars input[type="radio"] {
+      display: none;
+    }
+    
     .stars label {
-      font-size: 2rem; /* Одын хэмжээг томруулах */
-      color: gray; /* Анхны өнгө */
+      font-size: 30px; /* Larger stars */
       cursor: pointer;
+      color: lightgray; /* Default color for unselected stars */
     }
-
-    /* Одыг шалгаж, урдаас нь шарлуулах */
-    .stars input:checked ~ label {
-      color: gray;
+    
+    .stars input[type="radio"]:checked ~ label {
+      color: var(--primary-color); /* Color for selected stars */
     }
-
-    .stars input:checked + label,
-    .stars input:checked + label ~ label {
-      color: gold; /* Шар од */
-    }
-
+    
     .stars label:hover,
     .stars label:hover ~ label {
-      color: gold; /* Хулганы хулгана hover хийх үед шарлах */
+      color: var(--primary-color); /* Hover effect */
     }
   </style>
 </head>
 <body>
   <section class="container">
-    <div class="left-column">
-      <article>
-        <h2>Санал хүсэлт</h2>
-      </article>
-      <article>
-        <label for="name">Нэр</label>
-        <input type="text" id="name" name="name" placeholder="Таны нэрийг оруулна уу" required>
-      </article>
-      <article>
-        <label for="contact">Утас / Цахим хаяг</label>
-        <input type="text" id="contact" name="contact" placeholder="Таны холбоо барих мэдээлэл" required>
-      </article>
-      <article>
-        <label for="message">Санал хүсэлт үлдээх хэсэг</label>
-        <textarea id="message" name="message" placeholder="Санал хүсэлтээ бичнэ үү" rows="4" required></textarea>
-      </article>
-      <article>
-        <button type="submit" onclick="validateForm()">Илгээх</button>
-      </article>
-    </div>
+    <h2>Санал хүсэлт</h2>
+    
+    <form method="POST" action="/submit-form">
+      <label for="name">Нэр</label>
+      <input type="text" id="name" name="name" placeholder="Таны нэрийг оруулна уу" required>
 
-    <div class="right-column">
-      <article class="zurag">
-        <img src="https://cdn.greensoft.mn/uploads/site/1200/product/new_bfd803de2c06543cfbb2eb86b53b97f0c5deb5ba.png" alt="Санал хүсэлттэй холбоотой зураг" onerror="handleImageError()">
-      </article>
-      <article class="stars">
-        <input type="radio" id="star1" name="rating" value="1" required>
-        <label for="star1">★</label>
+      <label for="contact">Утас / Цахим хаяг</label>
+      <input type="text" id="contact" name="contact" placeholder="Таны холбоо барих мэдээлэл" required>
 
-        <input type="radio" id="star2" name="rating" value="2">
-        <label for="star2">★</label>
+      <label for="message">Санал хүсэлт үлдээх хэсэг</label>
+      <textarea id="message" name="message" placeholder="Санал хүсэлтээ бичнэ үү" rows="4" required></textarea>
 
-        <input type="radio" id="star3" name="rating" value="3">
-        <label for="star3">★</label>
+      <div class="star-box">
+        <div class="stars">
+          <input type="radio" id="star1" name="rating" value="1">
+          <label for="star1">★</label>
 
-        <input type="radio" id="star4" name="rating" value="4">
-        <label for="star4">★</label>
+          <input type="radio" id="star2" name="rating" value="2">
+          <label for="star2">★</label>
 
-        <input type="radio" id="star5" name="rating" value="5">
-        <label for="star5">★</label>
-      </article>
-    </div>
+          <input type="radio" id="star3" name="rating" value="3">
+          <label for="star3">★</label>
+
+          <input type="radio" id="star4" name="rating" value="4">
+          <label for="star4">★</label>
+
+          <input type="radio" id="star5" name="rating" value="5">
+          <label for="star5">★</label>
+        </div>
+      </div>
+
+      <button type="submit">Илгээх</button>
+    </form>
   </section>
-
-  <script>
-    // Форма шалгах функц
-    function validateForm() {
-      alert("Формаа амжилттай илгээв!");
-    }
-
-    // Зураг алдааг шалгах функц
-    function handleImageError() {
-      const img = document.querySelector('.zurag img');
-      img.src = 'default-image.jpg'; // Алдаа гарсан үед өөр зураг
-    }
-  </script>
 </body>
 </html>
