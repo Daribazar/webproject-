@@ -25,12 +25,17 @@
 
     </header>
     <main>
-        <section class="image-slider">
-            <div class="slider-container">
-                <img src="/image/r.jpg" alt="Delicious cake from Tous Les Jours" width="100%" height="600">
-                <img src="/image/u.jpg" alt="Delicious cake from Tous Les Jours" width="100%" height="100%">
+        <div class="slider">
+            <div class="slides">
+                <img class="slide" src="https://media-cdn.tripadvisor.com/media/photo-s/19/87/eb/7f/the-cakery.jpg" alt="Gallery Image 1">
+                <img class="slide" src="https://media-cdn.tripadvisor.com/media/photo-s/19/87/eb/7f/the-cakery.jpg" alt="Gallery Image 2">
+                <img class="slide" src="https://media-cdn.tripadvisor.com/media/photo-s/19/87/eb/7f/the-cakery.jpg" alt="Gallery Image 3">
+                <img class="slide" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/93/aa/44/photo1jpg.jpg?w=1800&h=1000&s=1" alt="Gallery Image 4">
             </div>
-        </section>
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
+
         <section>
 
         </section>
@@ -46,5 +51,6 @@
             <p>Вэб сайтыг: Грийн софт ХХК</p>
         </div>
     </footer>
+    <script src="index.js"></script>
 </body>
 </html>
