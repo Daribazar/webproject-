@@ -93,7 +93,7 @@ header {
 
 /* Description styles */
 .description {
-  background: linear-gradient(135deg,
+  background: linear-gradient(150deg,
    var(--primary-color), var(--secondary-color));
   padding: 2rem;
   border-radius: 8px;
@@ -185,4 +185,23 @@ header {
 }
 .footer{
   display: flex;
+}
+.site-footer{
+  background: linear-gradient(135deg , var(--primary-color), var(--secondary-color));
+  border-radius: 5px;
+  padding: 2rem;
+  color: var(--secondary-color);
+  font-family: var(--font-main);
+  
+}
+.footer-info{
+  font-family: var(--font-main);
+  line-height: 5px;  /* increased from 5px */
+  
+}
+.footer-copyright{
+  font-family: var(--font-main);
+  line-height: 5px;  /* increased from 5px */
+  margin-top: 40px;     /* added spacing between sections */
+
 }
