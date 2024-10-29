@@ -191,12 +191,12 @@ header {
   padding: 2rem;
   color: var(--text-color);
   font-family: var(--font-main);
-  
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.4);
+  margin-bottom: 30px;
 }
 .footer-info{
   font-family: var(--font-main);
   line-height: 5px; 
-  
 }
 .footer-copyright{
   font-family: var(--font-main);
