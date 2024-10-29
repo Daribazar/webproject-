@@ -78,7 +78,6 @@ header {
 /* Product overview styles */
 .product-overview {
   display: flex;
-  /* grid-template-columns: 1fr 1fr; */
   gap: 2rem;
   margin-bottom: 2rem;
 }
@@ -196,12 +195,11 @@ header {
 }
 .footer-info{
   font-family: var(--font-main);
-  line-height: 5px;  /* increased from 5px */
+  line-height: 5px; 
   
 }
 .footer-copyright{
   font-family: var(--font-main);
-  line-height: 5px;  /* increased from 5px */
-  margin-top: 40px;     /* added spacing between sections */
-
+  line-height: 5px; 
+  margin-top: 40px;   
 }

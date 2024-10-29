@@ -49,16 +49,16 @@
     padding: 2rem;
     color: var(--text-color);
     font-family: var(--font-main);
-    margin-top: 2rem;
+    margin-top: 10px;
   }
   .footer-info{
     font-family: var(--font-main);
-    line-height: 5px;  /* increased from 5px */
+    line-height: 5px; 
     
   }
   .footer-copyright{
     font-family: var(--font-main);
-    line-height: 5px;  /* increased from 5px */
-    margin-top: 40px;     /* added spacing between sections */
+    line-height: 5px; 
+    margin-top: 40px;    
   
   }
