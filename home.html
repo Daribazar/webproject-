@@ -109,16 +109,32 @@
             font-size: 16px;
             color: #3B1F1A;
         }
+        .footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            z-index: 1000;
+
+        }
+        
+        .footer-copyright{
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
 
     <header>
+        <img src="logo.png" alt="logo" class="logo" >
         <nav>
-            <a href="#">Home</a>
-            <a href="#">Бүтээгдэхүүн</a>
+            <a href="home.html">Home</a>
+            <a href="bvteegdehvvn.html">Бүтээгдэхүүн</a>
             <a href="#">Бидний тухай</a>
-            <a href="#">Салбарын мэдээлэл</a>
+            <a href="salbar.html">Салбарын мэдээлэл</a>
             <a href="#">Худалдан авалт</a>
         </nav>
     </header>
@@ -146,6 +162,18 @@
             <p>Wheat cookies made like by your Grandma</p>
         </div>
     </section>
+    <footer class="footer">
+        <br>
+        <div class="footer-info">
+            <p>Монгол Улс, Улаанбаатар хот, ХУД, 18-р хороо, Их Монгол гудамж, Хүннү 2222 хороолол</p>
+            <p>info@tlj.mn</p>
+            <p><a href="tel:+97675757510">(976) 7575-7510</a></p>
+        </div>
+        <div class="footer-copyright">
+            <p>©2022 - АРТИЗАН ХХК. БҮХ ЭРХ ХУУЛИАР ХАМГААЛАГДСАН</p>
+            <p>Вэб сайтыг: Грийн софт ХХК</p>
+        </div>
+    </footer>
 
 </body>
 </html>
