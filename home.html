@@ -3,54 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <meta name="description" content="Matcha Cookie Brownie - Бүтээгдэхүүний дэлгэрэнгүй мэдээллийн хуудас">
-    <link rel="stylesheet" href="home.css">
+    <title>Home page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #D8A7A1;
+            color: #3B1F1A;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        header {
+            width: 100%;
+            padding: 20px;
+            background-color: #D8A7A1;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            color: #3B1F1A;
+            font-weight: bold;
+        }
+
+        header nav a {
+            margin: 0 15px;
+            color: #3B1F1A;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        header nav a:hover {
+            color: #7B4B47;
+        }
+
+        .main-banner {
+            margin-top: 20px;
+            padding: 50px 0;
+            background-color: #D8A7A1;
+            text-align: center;
+            width: 100%;
+        }
+
+        .main-banner h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #3B1F1A;
+        }
+
+        .main-banner p {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #3B1F1A;
+        }
+
+        .main-banner .btn {
+            padding: 15px 30px;
+            background-color: #3B1F1A;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .main-banner .btn:hover {
+            background-color: #7B4B47;
+        }
+
+        /* Product section styling */
+        .product-section {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .product-card {
+            width: 200px;
+            text-align: center;
+            padding: 20px;
+            background-color: #F5E1DC;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .product-card h3 {
+            font-size: 20px;
+            margin: 15px 0;
+            color: #3B1F1A;
+        }
+
+        .product-card p {
+            font-size: 16px;
+            color: #3B1F1A;
+        }
+    </style>
 </head>
 <body>
+
     <header>
-        <a href="https://www.facebook.com/" target="_blank">
-            <img src="facebook-logo.png" alt="Facebook" width="24" height="24">
-        </a>
-        <a href="https://www.instagram.com/" target="_blank">
-            <img src="instagram-logo.png" alt="Instagram" width="24" height="24">
-        </a>
-        <h1>TOUS LES JOURS</h1>
-        <a href="login.html">Login</a>
         <nav>
-            <a href="bvteegdehvvn.html">Buteegdehunn</a>
-            <a href="sanalhuselt.html">Sanal huselt</a>
-            <a href="salbar.html">Salbar</a>
+            <a href="#">Home</a>
+            <a href="#">Бүтээгдэхүүн</a>
+            <a href="#">Бидний тухай</a>
+            <a href="#">Салбарын мэдээлэл</a>
+            <a href="#">Худалдан авалт</a>
         </nav>
-
     </header>
-    <main>
-        <div class="slider">
-            <div class="slides">
-                <img class="slide" src="https://media-cdn.tripadvisor.com/media/photo-s/19/87/eb/7f/the-cakery.jpg" alt="Gallery Image 1">
-                <img class="slide" src="https://media-cdn.tripadvisor.com/media/photo-s/19/87/eb/7f/the-cakery.jpg" alt="Gallery Image 2">
-                <img class="slide" src="https://media-cdn.tripadvisor.com/media/photo-s/19/87/eb/7f/the-cakery.jpg" alt="Gallery Image 3">
-                <img class="slide" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/93/aa/44/photo1jpg.jpg?w=1800&h=1000&s=1" alt="Gallery Image 4">
-            </div>
-            <button class="prev" onclick="prevSlide()">&#10094;</button>
-            <button class="next" onclick="nextSlide()">&#10095;</button>
-        </div>
 
-        <section>
+    <section class="main-banner">
+        <h1>Taste the original cookies</h1>
+        <p>Experience the best quality and taste.</p>
+        <button class="btn">Learn More</button>
+    </section>
 
-        </section>
-    </main>
-    <footer class="site-footer">
-        <div class="footer-info">
-            <p>Монгол Улс, Улаанбаатар хот, ХУД, 18-р хороо, Их Монгол гудамж, Хүннү 2222 хороолол</p>
-            <p>info@tlj.mn</p>
-            <p><a href="tel:+97675757510">(976) 7575-7510</a></p>
+    <section class="product-section">
+        <div class="product-card">
+            <img src="pretzels.png" alt="Handmade Pretzels">
+            <h3>Handmade Pretzels</h3>
+            <p>Traditional pretzels with a touch of honey</p>
         </div>
-        <div class="footer-copyright">
-            <p>©2022 - АРТИЗАН ХХК. БҮХ ЭРХ ХУУЛИАР ХАМГААЛАГДСАН</p>
-            <p>Вэб сайтыг: Грийн софт ХХК</p>
+        <div class="product-card">
+            <img src="wheat-cookies.png" alt="Wheat Cookies">
+            <h3>Wheat Cookies</h3>
+            <p>Traditional cookies with chocolate particles</p>
         </div>
-    </footer>
-    <script src="index.js"></script>
+        <div class="product-card">
+            <img src="sesame-cookies.png" alt="Sesame Cookies">
+            <h3>Sesame Cookies</h3>
+            <p>Wheat cookies made like by your Grandma</p>
+        </div>
+    </section>
+
 </body>
 </html>
