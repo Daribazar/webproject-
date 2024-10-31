@@ -98,6 +98,7 @@ header {
   border-radius: 8px;
   color: var(--text-color);
   margin-bottom: 2rem;
+  box-shadow: -15px 15px 15px rgba(0, 0, 0, 0.4);
 }
 
 /* Gallery styles */
@@ -191,7 +192,7 @@ header {
   padding: 2rem;
   color: var(--text-color);
   font-family: var(--font-main);
-  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.4);
+  box-shadow: -15px 15px 15px rgba(0, 0, 0, 0.4);
   margin-bottom: 30px;
 }
 .footer-info{
