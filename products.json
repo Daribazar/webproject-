@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Matcha Cookie Brownie",
-        "category": "Дессерт",
+        "category": "Dessert",
         "brand": "Cafe Delights",
         "price": 10,
         "image": "https://via.placeholder.com/150",
@@ -11,7 +11,7 @@
     {
         "id": 2,
         "name": "All Star Cake",
-        "category": "Бялуу",
+        "category": "Cake",
         "brand": "Delicious Cakes",
         "price": 20,
         "image": "https://via.placeholder.com/150",
@@ -20,7 +20,7 @@
     {
         "id": 3,
         "name": "Tuna Corn Mayonnaise Bread",
-        "category": "Талх",
+        "category": "Bread",
         "brand": "Bakery Fresh",
         "price": 5,
         "image": "https://via.placeholder.com/150",
@@ -29,7 +29,7 @@
     {
         "id": 4,
         "name": "Fruit Salad",
-        "category": "Салат",
+        "category": "Salad",
         "brand": "Healthy Life",
         "price": 8,
         "image": "https://via.placeholder.com/150",
@@ -38,7 +38,7 @@
     {
         "id": 5,
         "name": "Gourmet Pizza",
-        "category": "Хоол",
+        "category": "Food",
         "brand": "Pizzeria",
         "price": 15,
         "image": "https://via.placeholder.com/150",
