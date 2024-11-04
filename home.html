@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="width=device-width, initial-scale=1.0">
     <title>Home page</title>
     <style>
         * {
@@ -13,7 +14,7 @@
 
         body {
             font-family: Arial, sans-serif;
-            background-color: #D8A7A1;
+            background-color: white;
             color: #3B1F1A;
             display: flex;
             flex-direction: column;
@@ -119,12 +120,17 @@
         }
 
         .footer {
-            background-color: #333;
-            color: white;
+            background-color: #D8A7A1;
+            color: black;
+            
             padding: 20px 0;
             width: 100%;
+            text-align: center;
+            position: absolute;
+            left: 0;
+            bottom: 0;
         }
-        
+
         .footer-info p {
             margin: 5px 0;
         }
@@ -191,27 +197,6 @@
         </div>
     </footer>
 
-    <script>
-        // Background Image Slider
-        const banner = document.getElementById('main-banner');
-        const images = [
-            'url("cake.jpg")',
-            'url("r.jpg")',
-            'url("u.jpg")'
-        ];
-        let currentIndex = 0;
-
-        function changeBackground() {
-            currentIndex = (currentIndex + 1) % images.length;
-            banner.style.backgroundImage = images[currentIndex];
-        }
-
-        // Change image every 5 seconds
-        setInterval(changeBackground, 5000);
-
-        // Initialize first background image
-        banner.style.backgroundImage = images[currentIndex];
-    </script>
 
 </body>
 </html>
