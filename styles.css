@@ -1,6 +1,5 @@
-/* Custom properties */
 :root {
-  --primary-color: #e87cb8;
+  --primary-color: #D8A7A1;
   --secondary-color: #f0f0f0;
   --text-color: #333;
   --background-color: #fff;
@@ -9,16 +8,16 @@
   --transition-speed: 0.3s;
 }
 
-/* Dark mode colors */
 .dark-mode {
-  --primary-color: #e87cb8;
   --secondary-color: #1a1a1a;
   --text-color: #f0f0f0;
   --background-color: #1a1a1a;
 }
 
-/* Global styles */
-body {
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
   font-family: var(--font-main);
   color: var(--text-color);
   background-color: var(--background-color);
@@ -26,13 +25,28 @@ body {
   transition: background-color var(--transition-speed), color var(--transition-speed);
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
+header {
+  width: 100%;
+  padding: 20px;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--text-color);
+  font-family: cursive;
 }
 
-/* Typography */
+header nav a {
+  margin: 0 15px;
+  color: #3B1F1A;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+header nav a:hover {
+  color: #7B4B47;
+}
+
 h1, h2 {
   font-family: var(--font-heading);
   margin-bottom: 1rem;
@@ -46,8 +60,7 @@ h2 {
   font-size: 2rem;
 }
 
-/* Header styles */
-header {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -58,16 +71,6 @@ header {
   margin: 0;
 }
 
-.rating {
-  display: flex;
-  align-items: center;
-}
-
-.rating i {
-  color: gold;
-  margin-right: 0.25rem;
-}
-
 #theme-toggle {
   background: none;
   border: none;
@@ -75,7 +78,6 @@ header {
   color: var(--text-color);
 }
 
-/* Product overview styles */
 .product-overview {
   display: flex;
   gap: 2rem;
@@ -90,10 +92,8 @@ header {
   margin-right: 2rem;
 }
 
-/* Description styles */
 .description {
-  background: linear-gradient(150deg,
-   var(--primary-color), var(--secondary-color));
+  background: linear-gradient(150deg, var(--primary-color), var(--secondary-color));
   padding: 2rem;
   border-radius: 8px;
   color: var(--text-color);
@@ -101,7 +101,6 @@ header {
   box-shadow: -15px 15px 15px rgba(0, 0, 0, 0.4);
 }
 
-/* Gallery styles */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -120,7 +119,6 @@ header {
   transform: scale(1.05);
 }
 
-/* Details styles */
 .details ul {
   list-style-type: none;
   padding: 0;
@@ -130,12 +128,10 @@ header {
   margin-bottom: 0.5rem;
 }
 
-/* Button styles */
 .btn {
   display: inline-block;
   background-color: var(--primary-color);
   color: var(--text-color);
-
   padding: 0.75rem 1.5rem;
   text-decoration: none;
   border-radius: 4px;
@@ -148,7 +144,6 @@ header {
   background-color: darken(var(--primary-color), 10%);
 }
 
-/* Responsive styles */
 @media screen and (max-width: 768px) {
   .product-overview {
     grid-template-columns: 1fr;
@@ -173,7 +168,6 @@ header {
   }
 }
 
-/* Landscape mode */
 @media screen and (max-width: 812px) and (orientation: landscape) {
   .product-overview {
     grid-template-columns: 1fr 1fr;
@@ -183,24 +177,28 @@ header {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-.footer{
-  display: flex;
-}
-.site-footer{
-  background: linear-gradient(135deg , var(--primary-color), var(--secondary-color));
-  border-radius: 5px;
-  padding: 2rem;
+
+.footer {
+  background-color: var(--primary-color);
   color: var(--text-color);
-  font-family: var(--font-main);
-  box-shadow: -15px 15px 15px rgba(0, 0, 0, 0.4);
-  margin-bottom: 30px;
+  padding: 20px 0;
+  width: 100%;
+  text-align: center;
 }
-.footer-info{
-  font-family: var(--font-main);
-  line-height: 5px; 
+
+.footer-info p {
+  margin: 5px 0;
 }
-.footer-copyright{
-  font-family: var(--font-main);
-  line-height: 5px; 
-  margin-top: 40px;   
+
+.footer a {
+  color: #FFD700;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-copyright {
+  margin-top: 20px;
 }
