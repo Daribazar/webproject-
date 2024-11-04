@@ -3,26 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Бүтээгдэхүүний Жагсаалт</title>
+    <title>Product Page</title>
     <link rel="stylesheet" href="bvteegdehvvn.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Бүтээгдэхүүний Жагсаалт</h1>
-        <div class="filter">
-            <label for="category">Ангилал:</label>
-            <select id="category" onchange="filterProducts()">
-                <option value="all">Бүгд</option>
-                <option value="Dessert">Дессерт</option>
-                <option value="Cake">Бялуу</option>
-                <option value="Bread">Талх</option>
-                <option value="Salad">Салат</option>
-                <option value="Food">Хоол</option>
-            </select>
-        </div>
-        <div class="product-list" id="product-list"></div>
-    </div>
+    <header>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="bvteegdehvvn.html">Бүтээгдэхүүн</a>
+            <a href="uilchilgee.html">Бидний тухай</a>
+            <a href="salbar.html">Салбарын мэдээлэл</a>
+            <a href="zahialga.html">Худалдан авалт</a>
+        </nav>
+    </header>
 
-    <script type="module" src="script.js"></script>
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside class="sidebar">
+            <h2>АНГИЛАЛ</h2>
+            <ul class="category-list">
+                <li>Дессерт</li>
+                <li>Бялуу</li>
+                <li>Талх</li>
+                <li>Салат</li>
+                <li>Хоол</li>
+            </ul>
+            <div class="extra-info">
+                ХҮРГЭЛТИЙН НӨХЦӨЛ & ҮЙЛЧИЛГЭЭНИЙ НӨХЦӨЛ
+            </div>
+        </aside>
+
+        <!-- Main Product Section -->
+        <div class="product-section">
+            <h1>Бүтээгдэхүүний жагсаалт</h1>
+            <div class="product-list">
+                <div class="product-item">
+                    <img src="u.jpg" alt="Matcha Cookie Brownie">
+                    <h3>MATCHA COOKIE BROWNIE</h3>
+                    <span class="product-category">Дессерт</span>
+                    <p class="description">Орео жигнэмэгтэй матч бровни. Матчаны сэргээх амт, шоколадны тааламжит амтыг Матча бровнигоос мэдрээрэй. Халуун кофетой хамгийн их тохирно.</p>
+                </div>
+                <div class="product-item">
+                    <img src="cake.jpg" alt="Matcha Layer Pastry">
+                    <h3>MATCHA LAYER PASTRY</h3>
+                    <span class="product-category">Талх</span>
+                </div>
+                <div class="product-item">
+                    <img src="r.jpg" alt="All Star Cake">
+                    <h3>ALL STAR CAKE</h3>
+                    <span class="product-category">Бялуу</span>
+                </div>
+                <div class="product-item">
+                    <img src="tuna-corn-bread.jpg" alt="Tuna Corn Mayonnaise Bread">
+                    <h3>TUNA CORN MAYONNAISE BREAD</h3>
+                    <span class="product-category">Талх</span>
+                </div>
+                <!-- Add more product items as needed -->
+            </div>
+        </div>
+    </div>
 </body>
 </html>
