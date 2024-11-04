@@ -4,106 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Нэвтрэх</title>
+    <style>
+        :root {
+            --primary: #D8A7A1;
+            --btn-bg-color: #fff;
+            --btn-hover-bg-color: #f0f0f0;
+            --text-color: #000;
+            --placeholder-color: #666;
+            --font-family: 'Poppins', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            font-family: var(--font-family);
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f2f2f2;
+        }
+
+        .glass-container {
+            width: 500px;
+            background: var(--primary);
+            border-radius: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-box {
+            max-width: 250px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h2 {
+            color: var(--text-color);
+            margin-bottom: 30px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input {
+            width: 80%;
+            padding: 15px;
+            margin: 15px auto;
+            border-radius: 20px;
+            background: var(--btn-bg-color);
+            border: none;
+            font-size: 13px;
+        }
+
+        input::placeholder {
+            color: var(--placeholder-color);
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        button {
+            width: 200px;
+            margin: 20px auto;
+            border-radius: 20px;
+            background: var(--btn-bg-color);
+            padding: 15px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: var(--btn-hover-bg-color);
+        }
+
+        p {
+            font-size: 12px;
+            color: var(--text-color);
+            margin-top: 25px;
+        }
+
+        #register {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: bold;
+        }
+    </style>
 </head>
-<style>
-    * {
-        margin: 0;
-        box-sizing: border-box;
-        font-family: 'Poppins', sans-serif;
-    }
-
-    body{
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background: #f2f2f2;
-    }
-
-    .glass-container{
-        width: 500px;
-        height: 400px;
-        background: #FFC0CB;
-        border-radius: 30px;
-        border: none;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    .glass-container::before{
-        display: none;
-    }
-
-    .login-box{
-        max-width: 250px;
-        margin: 0 auto;
-        text-align: center;
-        padding: 10px;
-
-    }
-
-    h2 {
-        color: #000;
-        margin: 0 auto;
-        text-align: center;
-        margin-top: 20px;
-        margin-bottom: 30px;
-    }
-
-    form {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: -20px;
-    }
-
-    input {
-        width: 80%;
-        padding: 15px;
-        margin: 15px auto;
-        border-radius: 20px;
-        background: #fff;
-        border: none;
-        color: #000;
-        font-size: 13px;
-    }
-
-    input::placeholder {
-        color: #666;
-    }
-
-    input:focus {
-        outline: none;
-    }
-
-    button {
-        width: 200px;
-        margin: 20px auto;
-        border-radius: 20px;
-        background: #fff;
-        padding: 15px;
-        color: black;
-        border: none;
-        cursor: pointer;
-    }
-
-    button:hover {
-        background: #f0f0f0;
-        color: #000;
-        outline: none;
-    }
-
-    p {
-        font-size: 12px;
-        color: #000;
-        margin-top: 25px;
-    }
-
-    #register {
-        text-decoration: none;
-        color: #000;
-        font-weight: bold;
-    }
-
-</style>
 <body>
     <div class="glass-container">
         <div class="login-box">
