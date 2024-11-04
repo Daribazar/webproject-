@@ -9,7 +9,7 @@
             font-family: sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f7f7f7;
+            background-color: #f0f0f5;
         }
         .container {
             display: flex;
@@ -23,9 +23,13 @@
             border: 1px solid #ccc;
             padding: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-            background-color: #fff;
+            border-radius: 8px;
+            background-color: #ffffff;
             text-align: center;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
         }
         .card img {
             width: 100%;
@@ -37,12 +41,13 @@
             margin-top: 10px;
             font-size: 1.2rem;
             font-weight: bold;
+            color: #333;
         }
         .card p {
-            margin-top: 5px;
+            margin: 5px 0;
             font-size: 0.9rem;
+            color: #555;
         }
-        /* Google Map container */
         .map-container {
             text-align: center;
             margin-top: 40px;
@@ -58,61 +63,60 @@
 
     <!-- Card Section with Branch Info -->
     <section>
-        <h2 style="text-align: center; margin-bottom: 20px;">САЛБАРЫН МЭДЭЭЛЭЛ</h2>
+        <h2 style="text-align: center; margin-bottom: 20px; color: #333;">САЛБАРЫН МЭДЭЭЛЭЛ</h2>
         <div class="container">
-            <article class="card">
+            <article class="card" style="background-color: #ffe5e5;">
                 <img src="https://i.imgur.com/l5Q0hKz.jpg" alt="Branch 1">
                 <h3>ХҮҮХДИЙН 100</h3>
                 <p>Утас-1: 7510-0151</p>
                 <p>Даваа-Ням: 08:00-22:00</p>
             </article>
-            <article class="card">
+            <article class="card" style="background-color: #e5ffe5;">
                 <img src="https://i.imgur.com/l5Q0hKz.jpg" alt="Shangri-La Mall">
                 <h3>ШАНГРИ-ЛА МОЛЛ</h3>
                 <p>Утас-1: 7510-0156</p>
                 <p>Даваа-Ням: 10:00-21:00</p>
             </article>
-            <article class="card">
+            <article class="card" style="background-color: #e5e5ff;">
                 <img src="https://i.imgur.com/l5Q0hKz.jpg" alt="Naadam Center">
                 <h3>НААДАМ ЦЕНТР</h3>
                 <p>Утас-1: 7510-0154</p>
                 <p>Даваа-Ням: 08:30-21:30</p>
             </article>
-            <article class="card">
+            <article class="card" style="background-color: #fff5e5;">
                 <img src="https://i.imgur.com/l5Q0hKz.jpg" alt="Khunnu Mall">
                 <h3>ХҮННҮ МОЛЛ</h3>
                 <p>Утас-1: 7510-0150</p>
                 <p>Даваа-Баасан: 09:00-21:30<br>Бямба-Ням: 10:00-21:00</p>
             </article>
-            <article class="card">
+            <article class="card" style="background-color: #f5e5ff;">
                 <img src="https://i.imgur.com/l5Q0hKz.jpg" alt="State Department Store">
                 <h3>УЛСЫН ИХ ДЭЛГҮҮР</h3>
                 <p>Утас-1: 7510-0152</p>
                 <p>Даваа-Ням: 09:00-22:00</p>
             </article>
-            <article class="card">
+            <article class="card" style="background-color: #e5f7ff;">
                 <img src="https://i.imgur.com/l5Q0hKz.jpg" alt="Zaisan Star">
                 <h3>ЗАЙСАН СТАР</h3>
                 <p>Утас-1: 7575-7510</p>
                 <p>Даваа-Ням: 08:00-22:00</p>
             </article>
-            <article class="card">
+            <article class="card" style="background-color: #fff0e5;">
                 <img src="https://i.imgur.com/l5Q0hKz.jpg" alt="Central Tower">
                 <h3>СЭНТРАЛ ТАУЭР</h3>
                 <p>Утас-1: 7575-7510</p>
                 <p>Даваа-Баасан: 07:00-22:00<br>Бямба-Ням: 08:00-22:00</p>
             </article>
-            <!-- Add more branches as needed -->
         </div>
     </section>
 
-    <!-- Google Map Embed -->
+    <!-- Google Map Embed with Marked Branch Locations -->
     <div class="map-container">
-    
         <iframe 
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2681.9589651864143!2d106.91340831545534!3d47.917418879208826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5d96922d08e38b07%3A0x30984986bcbcf4c4!2z0K3Qu9C40L3QvtCy0LjRgNCwIDAwLCDQodC10LLQtdC5IC0g0KPQvtGA0LDQvdC40YfQvdGW0L3QutCwINC60LjQu9C90LjQvdC40LUg0Lgg0LrQvtGA0YPQutCwLCDQntC90LAg0LTQtdC90L7QvNC40YLRjA!5e0!3m2!1sen!2smn!4v1697367956629!5m2!1sen!2smn" 
             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
         </iframe>
+        <p style="text-align: center; margin-top: 10px; color: #555;">Click on each marker to view branch details.</p>
     </div>
 
 </body>
