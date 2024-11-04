@@ -3,125 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="dfa">
     <title>Бүртгүүлэх</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f2f2f2;
+        }
+
+        .glass-container {
+            width: 500px;
+            height: 480px;
+            background: #FFC0CB;
+            border-radius: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-box {
+            max-width: 250px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 10px;
+        }
+
+        h2 {
+            color: #000;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input {
+            width: 80%;
+            padding: 15px;
+            margin: 15px auto;
+            border-radius: 20px;
+            background: #fff;
+            border: none;
+            color: #000;
+            font-size: 13px;
+        }
+
+        input::placeholder {
+            color: #666;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        button {
+            width: 200px;
+            margin: 20px auto;
+            border-radius: 20px;
+            background: #fff;
+            padding: 15px;
+            color: black;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #f0f0f0;
+            color: #000;
+        }
+
+        p {
+            font-size: 12px;
+            color: #000;
+            margin-top: 25px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+    </style>
 </head>
-<style>
-    * {
-        margin: 0;
-        box-sizing: border-box;
-        font-family: 'Poppins', sans-serif;
-    }
-
-    body{
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-image: url('/image/Login\ Form\ Background\ Image.jpeg');
-        background-size: cover;
-    }
-
-    .glass-container{
-        width: 300px;
-        height: 380px;
-        position: relative;
-        z-index: 1;
-        background: rgba(255, 255, 255, 0.1);
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-        border: 1px solid #fff;
-    }
-    .glass-container::before{
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        border-radius: 10px;
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
-        z-index: -1;
-    }
-
-    .login-box{
-        max-width: 250px;
-        margin: 0 auto;
-        text-align: center;
-        padding: 10px;
-
-    }
-
-    h2 {
-        color: #fff;
-        margin: 0 auto;
-        text-align: center;
-        margin-top: 20px;
-    }
-
-    form {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: -20px;
-    }
-
-    input {
-        padding: 10px;
-        margin-top: 25px;
-        border: none;
-        border-radius: 10px;
-        background: transparent;
-        border: 1px solid #fff;
-        color: #fff;
-        font-size: 13px;
-    }
-
-    input::placeholder {
-        color: #fff;
-    }
-
-    input:focus {
-        outline: none;
-    }
-
-    button {
-        background: #fff;
-        color: black;
-        padding: 10px;
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
-        margin-top: 25px;
-    }
-
-    button:hover {
-        background: transparent;
-        color: white;
-        outline: 1px solid #fff;
-    }
-
-    p {
-        font-size: 12px;
-        color: #fff;
-        margin-top: 25px;
-    }
-
-    #register {
-        text-decoration: none;
-        color: #fff;
-        font-weight: bold;
-    }
-</style>
 <body>
     <div class="glass-container">
         <div class="login-box">
             <h2>Бүртгүүлэх</h2>
-            <form action="#" method="post">
-                <input type="text" id="username" name="username" required placeholder="Нэвтрэх нэр"> 
-                <input type="email" id="email" name="email" required placeholder="Email">
-                <input type="password" id="password" name="password" required placeholder="Нууц үг">
-                <button type="submit" onclick="window.location.href='login.html';">Бүртгүүлэх</button>
-                <p>Бүртгэл байгаа эсэх? <a href="login.html" id="register">Нэвтрэх</a></p>
+            <form action="login.html" method="post" onsubmit="window.location.href='login.html'; return false;">
+                <input type="text" placeholder="Нэвтрэх нэр" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Нууц үг" required>
+                <button type="submit">Бүртгүүлэх</button>
+                <p>Бүртгэл байгаа эсэх? <a href="login.html">Нэвтрэх</a></p>
             </form>
         </div>
     </div>

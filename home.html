@@ -28,7 +28,8 @@
             justify-content: space-around;
             align-items: center;
             color: #3B1F1A;
-            font-weight: bold;
+            font-weight: italic;
+            font-family: cursive;
         }
 
         header nav a {
@@ -45,9 +46,14 @@
         .main-banner {
             margin-top: 20px;
             padding: 50px 0;
-            background-color: #D8A7A1;
             text-align: center;
             width: 100%;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            color: #3B1F1A;
+            position: relative;
+            transition: background-image 1s ease-in-out;
         }
 
         .main-banner h1 {
@@ -55,12 +61,14 @@
             font-weight: bold;
             margin-bottom: 10px;
             color: #3B1F1A;
+            font-family: cursive;
         }
 
         .main-banner p {
             font-size: 24px;
             margin-bottom: 20px;
             color: #3B1F1A;
+            font-family: cursive;
         }
 
         .main-banner .btn {
@@ -109,19 +117,28 @@
             font-size: 16px;
             color: #3B1F1A;
         }
+
         .footer {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
             background-color: #333;
             color: white;
             padding: 20px 0;
-            z-index: 1000;
-
+            width: 100%;
         }
         
-        .footer-copyright{
+        .footer-info p {
+            margin: 5px 0;
+        }
+
+        .footer a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-copyright {
             margin-top: 20px;
         }
     </style>
@@ -129,7 +146,6 @@
 <body>
 
     <header>
-        <img src="logo.png" alt="logo" class="logo" >
         <nav>
             <a href="home.html">Home</a>
             <a href="bvteegdehvvn.html">Бүтээгдэхүүн</a>
@@ -139,7 +155,7 @@
         </nav>
     </header>
 
-    <section class="main-banner">
+    <section class="main-banner" id="main-banner">
         <h1>Taste the original cookies</h1>
         <p>Experience the best quality and taste.</p>
         <button class="btn">Learn More</button>
@@ -147,23 +163,23 @@
 
     <section class="product-section">
         <div class="product-card">
-            <img src="pretzels.png" alt="Handmade Pretzels">
+            <img src="cake.jpg" alt="Handmade Pretzels">
             <h3>Handmade Pretzels</h3>
             <p>Traditional pretzels with a touch of honey</p>
         </div>
         <div class="product-card">
-            <img src="wheat-cookies.png" alt="Wheat Cookies">
+            <img src="r.jpg" alt="Wheat Cookies">
             <h3>Wheat Cookies</h3>
             <p>Traditional cookies with chocolate particles</p>
         </div>
         <div class="product-card">
-            <img src="sesame-cookies.png" alt="Sesame Cookies">
+            <img src="u.jpg" alt="Sesame Cookies">
             <h3>Sesame Cookies</h3>
             <p>Wheat cookies made like by your Grandma</p>
         </div>
     </section>
+    
     <footer class="footer">
-        <br>
         <div class="footer-info">
             <p>Монгол Улс, Улаанбаатар хот, ХУД, 18-р хороо, Их Монгол гудамж, Хүннү 2222 хороолол</p>
             <p>info@tlj.mn</p>
@@ -174,6 +190,28 @@
             <p>Вэб сайтыг: Грийн софт ХХК</p>
         </div>
     </footer>
+
+    <script>
+        // Background Image Slider
+        const banner = document.getElementById('main-banner');
+        const images = [
+            'url("cake.jpg")',
+            'url("r.jpg")',
+            'url("u.jpg")'
+        ];
+        let currentIndex = 0;
+
+        function changeBackground() {
+            currentIndex = (currentIndex + 1) % images.length;
+            banner.style.backgroundImage = images[currentIndex];
+        }
+
+        // Change image every 5 seconds
+        setInterval(changeBackground, 5000);
+
+        // Initialize first background image
+        banner.style.backgroundImage = images[currentIndex];
+    </script>
 
 </body>
 </html>

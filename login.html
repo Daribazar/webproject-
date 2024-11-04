@@ -18,29 +18,19 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
-        background-image: url('/image/Login\ Form\ Background\ Image.jpeg');
-        background-size: cover;
+        background: #f2f2f2;
     }
 
     .glass-container{
-        width: 300px;
-        height: 320px;
-        position: relative;
-        z-index: 1;
-        background: rgba(255, 255, 255, 0.1);
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-        border: 1px solid #fff;
+        width: 500px;
+        height: 400px;
+        background: #FFC0CB;
+        border-radius: 30px;
+        border: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
     .glass-container::before{
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        border-radius: 10px;
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
-        z-index: -1;
+        display: none;
     }
 
     .login-box{
@@ -52,10 +42,11 @@
     }
 
     h2 {
-        color: #fff;
+        color: #000;
         margin: 0 auto;
         text-align: center;
         margin-top: 20px;
+        margin-bottom: 30px;
     }
 
     form {
@@ -65,18 +56,18 @@
     }
 
     input {
-        padding: 10px;
-        margin-top: 25px;
+        width: 80%;
+        padding: 15px;
+        margin: 15px auto;
+        border-radius: 20px;
+        background: #fff;
         border: none;
-        border-radius: 10px;
-        background: transparent;
-        border: 1px solid #fff;
-        color: #fff;
+        color: #000;
         font-size: 13px;
     }
 
     input::placeholder {
-        color: #fff;
+        color: #666;
     }
 
     input:focus {
@@ -84,30 +75,31 @@
     }
 
     button {
+        width: 200px;
+        margin: 20px auto;
+        border-radius: 20px;
         background: #fff;
+        padding: 15px;
         color: black;
-        padding: 10px;
         border: none;
-        border-radius: 10px;
         cursor: pointer;
-        margin-top: 25px;
     }
 
     button:hover {
-        background: transparent;
-        color: white;
-        outline: 1px solid #fff;
+        background: #f0f0f0;
+        color: #000;
+        outline: none;
     }
 
     p {
         font-size: 12px;
-        color: #fff;
+        color: #000;
         margin-top: 25px;
     }
 
     #register {
         text-decoration: none;
-        color: #fff;
+        color: #000;
         font-weight: bold;
     }
 
@@ -119,7 +111,7 @@
             <form action="#" method="POST">
                 <input type="text" id="username" name="username" required placeholder="Нэр">
                 <input type="password" id="password" name="password" required placeholder="Нууц үг">
-                <button type="submit" onclick="window.location.href='home.html';">Нэвтрэх</button>
+                <button type="submit" onclick="window.location.href='home.html'">Нэвтрэх</button>
                 <p>Бүртгэл байгаа эсэх? <a href="signup.html" id="register">Бүртгүүлэх</a></p>
             </form>
         </div>
