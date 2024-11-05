@@ -108,3 +108,25 @@ article {
     grid-template-columns: 1fr;
   }
 }
+        header {
+            width: 100%;
+            padding: 20px;
+            background-color: #D8A7A1;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            color: #3B1F1A;
+            font-weight: italic;
+            font-family: cursive;
+        }
+
+        header nav a {
+            margin: 0 15px;
+            color: #3B1F1A;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        header nav a:hover {
+            color: #7B4B47;
+        }

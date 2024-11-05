@@ -5,11 +5,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Branch Information</title>
     <style>
+        :root {
+            --primary-color: #e87cb8;
+            --secondary-color: #f0f0f0;
+            --text-color: #333;
+            --background-color: #fff;
+            --font-main: 'Roboto', sans-serif;
+            --font-heading: 'Playfair Display', serif;
+            --transition-speed: 0.3s;
+        }
+
         body {
-            font-family: sans-serif;
+            font-family: var(--font-main);
             margin: 0;
             padding: 0;
-            background-color: #f0f0f5;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+        }
+        footer {
+            background: #736c6c;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .footer-section {
+            width: 25%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .footer-section h2 {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+            color: #f5f5f5;
+        }
+
+        .footer-section p, 
+        .footer-section ul, 
+        .footer-section a {
+            color: #bbb;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin: 5px 0;
+        }
+
+        .footer-section .social a {
+            margin: 0 10px;
+            display: inline-block;
+        }
+
+        .footer-bottom {
+            padding: 10px;
+            background: #222;
+            font-size: 0.8em;
+            color: #bbb;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            width: 100%;
+        }
+        
+        .footer-info p {
+            margin: 5px 0;
+        }
+
+        .footer a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-copyright {
+            margin-top: 20px;
         }
         .container {
             display: flex;
@@ -18,35 +106,80 @@
             gap: 20px;
             padding: 20px;
         }
+
         .card {
             width: 300px;
             border: 1px solid #ccc;
             padding: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
-            background-color: #ffffff;
+            background-color: var(--background-color);
             text-align: center;
-            transition: transform 0.2s;
+            transition: transform var(--transition-speed);
         }
+
         .card:hover {
             transform: translateY(-5px);
         }
+
         .card img {
             width: 100%;
             height: 200px;
             object-fit: cover;
             border-radius: 5px;
         }
+
         .card h3 {
             margin-top: 10px;
             font-size: 1.2rem;
             font-weight: bold;
-            color: #333;
+            color: var(--text-color);
+            font-family: var(--font-heading);
         }
+
         .card p {
             margin: 5px 0;
             font-size: 0.9rem;
             color: #555;
+        }
+
+        /* Slider */
+        .slider {
+            position: relative;
+            width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .slider img {
+            width: 100%;
+            display: none;
+        }
+
+        img.displaySlide {
+            display: block;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        .slider button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            padding: 10px 15px;
+            background-color: hsla(0, 0%, 0%, 0.5);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
         }
         .map-container {
             text-align: center;
@@ -57,67 +190,135 @@
             height: 450px;
             border: 0;
         }
+        @keyframes fade {
+            from { opacity: .5 }
+            to { opacity: 1 }
+        }
+        header {
+            width: 100%;
+            padding: 20px;
+            background-color: #D8A7A1;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            color: #3B1F1A;
+            font-weight: italic;
+            font-family: cursive;
+        }
+
+        header nav a {
+            margin: 0 15px;
+            color: #3B1F1A;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        header nav a:hover {
+            color: #7B4B47;
+        }
     </style>
 </head>
 <body>
+    <header>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="bvteegdehvvn.html">Бүтээгдэхүүн</a>
+            <a href="#">Бидний тухай</a>
+            <a href="salbar.html">Салбарын мэдээлэл</a>
+            <a href="#">Худалдан авалт</a>
+        </nav>
+    </header>
 
     <!-- Card Section with Branch Info -->
     <section>
-        <h2 style="text-align: center; margin-bottom: 20px; color: #333;">САЛБАРЫН МЭДЭЭЛЭЛ</h2>
+        <h2 style="text-align: center; margin-bottom: 20px; color: var(--text-color);">САЛБАРЫН МЭДЭЭЛЭЛ</h2>
         <div class="container">
-            <article class="card" style="background-color: #ffe5e5;">
-                <img src="https://i.imgur.com/l5Q0hKz.jpg" alt="Branch 1">
+            <article class="card" style="background-color: #D8A7A1;">
+                <img src="https://cdn.greensoft.mn/uploads/users/1977/images/tlj/k100.jpg" alt="Branch 1">
                 <h3>ХҮҮХДИЙН 100</h3>
                 <p>Утас-1: 7510-0151</p>
                 <p>Даваа-Ням: 08:00-22:00</p>
             </article>
-            <article class="card" style="background-color: #e5ffe5;">
-                <img src="https://i.imgur.com/l5Q0hKz.jpg" alt="Shangri-La Mall">
+            <article class="card" style="background-color: #D8A7A1;">
+                <img src="https://cdn.greensoft.mn/uploads/users/1277/images/Technozone%20branches/Edits/7.jpg" alt="Shangri-La Mall">
                 <h3>ШАНГРИ-ЛА МОЛЛ</h3>
                 <p>Утас-1: 7510-0156</p>
                 <p>Даваа-Ням: 10:00-21:00</p>
             </article>
-            <article class="card" style="background-color: #e5e5ff;">
-                <img src="https://i.imgur.com/l5Q0hKz.jpg" alt="Naadam Center">
+            <article class="card" style="background-color: #D8A7A1;">
+                <img src="https://cdn.greensoft.mn/uploads/users/1977/images/tlj/naadam-new.jpg" alt="Naadam Center">
                 <h3>НААДАМ ЦЕНТР</h3>
                 <p>Утас-1: 7510-0154</p>
                 <p>Даваа-Ням: 08:30-21:30</p>
             </article>
-            <article class="card" style="background-color: #fff5e5;">
-                <img src="https://i.imgur.com/l5Q0hKz.jpg" alt="Khunnu Mall">
+            <article class="card" style="background-color: #D8A7A1;">
+                <img src="https://cdn.greensoft.mn/uploads/users/1977/images/tlj/Hu-mall-new.jpg" alt="Khunnu Mall">
                 <h3>ХҮННҮ МОЛЛ</h3>
                 <p>Утас-1: 7510-0150</p>
                 <p>Даваа-Баасан: 09:00-21:30<br>Бямба-Ням: 10:00-21:00</p>
             </article>
-            <article class="card" style="background-color: #f5e5ff;">
-                <img src="https://i.imgur.com/l5Q0hKz.jpg" alt="State Department Store">
+            <article class="card" style="background-color: #D8A7A1;">
+                <img src="https://cdn.greensoft.mn/uploads/users/1977/images/tlj/UID.jpg" alt="State Department Store">
                 <h3>УЛСЫН ИХ ДЭЛГҮҮР</h3>
                 <p>Утас-1: 7510-0152</p>
                 <p>Даваа-Ням: 09:00-22:00</p>
             </article>
-            <article class="card" style="background-color: #e5f7ff;">
-                <img src="https://i.imgur.com/l5Q0hKz.jpg" alt="Zaisan Star">
+            <article class="card" style="background-color:#D8A7A1;">
+                <img src="https://cdn.greensoft.mn/uploads/users/1977/images/tlj/zstar.jpg" alt="Zaisan Star">
                 <h3>ЗАЙСАН СТАР</h3>
                 <p>Утас-1: 7575-7510</p>
                 <p>Даваа-Ням: 08:00-22:00</p>
             </article>
-            <article class="card" style="background-color: #fff0e5;">
-                <img src="https://i.imgur.com/l5Q0hKz.jpg" alt="Central Tower">
+            <article class="card" style="background-color: #D8A7A1;">
+                <img src="https://cdn.greensoft.mn/uploads/users/1977/images/tlj/central.jpg" alt="Central Tower">
                 <h3>СЭНТРАЛ ТАУЭР</h3>
                 <p>Утас-1: 7575-7510</p>
                 <p>Даваа-Баасан: 07:00-22:00<br>Бямба-Ням: 08:00-22:00</p>
             </article>
         </div>
     </section>
-
-    <!-- Google Map Embed with Marked Branch Locations -->
     <div class="map-container">
         <iframe 
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2681.9589651864143!2d106.91340831545534!3d47.917418879208826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5d96922d08e38b07%3A0x30984986bcbcf4c4!2z0K3Qu9C40L3QvtCy0LjRgNCwIDAwLCDQodC10LLQtdC5IC0g0KPQvtGA0LDQvdC40YfQvdGW0L3QutCwINC60LjQu9C90LjQvdC40LUg0Lgg0LrQvtGA0YPQutCwLCDQntC90LAg0LTQtdC90L7QvNC40YLRjA!5e0!3m2!1sen!2smn!4v1697367956629!5m2!1sen!2smn" 
-            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="text-align: center; margin-top: 10px; color: #555;">
         </iframe>
-        <p style="text-align: center; margin-top: 10px; color: #555;">Click on each marker to view branch details.</p>
     </div>
-
+    <footer>
+        <div class="footer-container">
+          <div class="footer-section about">
+            <h2>About Us</h2>
+            <p>We are a company dedicated to providing the best services to our customers. Our goal is to enhance the experience of every user.</p>
+          </div>
+          
+          <div class="footer-section links">
+            <h2>Quick Links</h2>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-section social">
+            <h2>Follow Us</h2>
+            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+            <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+          </div>
+      
+          <div class="footer-section contact">
+            <h2>Contact Us</h2>
+            <p>Email: info@company.com</p>
+            <p>Phone: +123 456 7890</p>
+            <p>Address: 123 Street Name, City, Country</p>
+          </div>
+        </div>
+      
+        <div class="footer-bottom">
+          <p>&copy; 2023 Your Company Name. All rights reserved.</p>
+        </div>
+      </footer>
 </body>
 </html>
