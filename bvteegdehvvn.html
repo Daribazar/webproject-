@@ -5,6 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Page</title>
     <link rel="stylesheet" href="bvteegdehvvn.css">
+    <style>
+        /* Footer Styles */
+        footer {
+            background: #e3dddd;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .footer-section {
+            width: 25%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .footer-section h2 {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+            color: #f5f5f5;
+        }
+
+        .footer-section p, 
+        .footer-section ul, 
+        .footer-section a {
+            color: #bbb;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin: 5px 0;
+        }
+
+        .footer-section .social a {
+            margin: 0 10px;
+            display: inline-block;
+        }
+
+        .footer-bottom {
+            padding: 10px;
+            background: #222;
+            font-size: 0.8em;
+            color: #bbb;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -16,7 +73,6 @@
             <a href="zahialga.html">Худалдан авалт</a>
         </nav>
     </header>
-
     <div class="container">
         <!-- Sidebar Section -->
         <aside class="sidebar">
@@ -63,15 +119,41 @@
         </div>
     </div>
 
-    <footer class="footer">
-        <div class="footer-info">
-            <p>Монгол Улс, Улаанбаатар хот, ХУД, 18-р хороо, Их Монгол гудамж, Хүннү 2222 хороолол</p>
-            <p>info@tlj.mn</p>
-            <p><a href="tel:+97675757510">(976) 7575-7510</a></p>
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h2>About Us</h2>
+                <p>We are a company dedicated to providing the best services to our customers. Our goal is to enhance the experience of every user.</p>
+            </div>
+            
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="zahialga.html">About</a></li>
+                    <li><a href="sanalhuselt.html">Services</a></li>
+                    <li><a href="uilchilgee.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section social">
+                <h2>Follow Us</h2>
+                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href=""><img src="twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+            </div>
+            <div class="footer-section contact">
+                <h2>Contact Us</h2>
+                <p>Email: info@company.com</p>
+                <p>Phone: +97691659994</p>
+                <p>Address: 123 Street Name, City, Country</p>
+            </div>
         </div>
-        <div class="footer-copyright">
-            <p>©2022 - АРТИЗАН ХХК. БҮХ ЭРХ ХУУЛИАР ХАМГААЛАГДСАН</p>
-            <p>Вэб сайтыг: Грийн софт ХХК</p>
+      
+        <div class="footer-bottom">
+            <p>&copy; 2024 "Delicious Bakery's Website"</p>
         </div>
     </footer>
 </body>
