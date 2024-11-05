@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover branch information including location, contact details, and hours of operation.">
     <title>Branch Information</title>
-    <style>
+        <style>
         :root {
-            --primary-color: #e87cb8;
+            --primary-color:  #D8A7A1; /* Increased contrast */
             --secondary-color: #f0f0f0;
             --text-color: #333;
-            --background-color: #fff;
+            --background-color: #ffffff;
             --font-main: 'Roboto', sans-serif;
             --font-heading: 'Playfair Display', serif;
             --transition-speed: 0.3s;
@@ -22,83 +23,30 @@
             background-color: var(--secondary-color);
             color: var(--text-color);
         }
-        footer {
-            background: #736c6c;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
 
-        .footer-container {
+        header {
+            width: 100%;
+            padding: 20px;
+            background-color:  #D8A7A1; /* Adjusted for contrast */
             display: flex;
             justify-content: space-around;
-            flex-wrap: wrap;
-            padding: 20px;
+            align-items: center;
+            color: #fff;
+            font-weight: italic;
+            font-family: cursive;
         }
 
-        .footer-section {
-            width: 25%;
-            padding: 10px;
-            box-sizing: border-box;
-        }
-
-        .footer-section h2 {
-            margin-bottom: 10px;
-            font-size: 1.2em;
-            color: #f5f5f5;
-        }
-
-        .footer-section p, 
-        .footer-section ul, 
-        .footer-section a {
-            color: #bbb;
+        header nav a {
+            margin: 0 15px;
+            color: #fff;
             text-decoration: none;
-            font-size: 0.9em;
+            font-size: 18px;
         }
 
-        .footer-section ul {
-            list-style: none;
-            padding: 0;
+        header nav a:hover {
+            color: #ffcccb;
         }
 
-        .footer-section ul li {
-            margin: 5px 0;
-        }
-
-        .footer-section .social a {
-            margin: 0 10px;
-            display: inline-block;
-        }
-
-        .footer-bottom {
-            padding: 10px;
-            background: #222;
-            font-size: 0.8em;
-            color: #bbb;
-        }
-        .footer {
-            background-color: #333;
-            color: white;
-            padding: 20px 0;
-            width: 100%;
-        }
-        
-        .footer-info p {
-            margin: 5px 0;
-        }
-
-        .footer a {
-            color: #FFD700;
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-
-        .footer-copyright {
-            margin-top: 20px;
-        }
         .container {
             display: flex;
             flex-wrap: wrap;
@@ -143,78 +91,79 @@
             color: #555;
         }
 
-        /* Slider */
-        .slider {
-            position: relative;
-            width: 100%;
-            margin: auto;
-            overflow: hidden;
-        }
-
-        .slider img {
-            width: 100%;
-            display: none;
-        }
-
-        img.displaySlide {
-            display: block;
-            animation-name: fade;
-            animation-duration: 1.5s;
-        }
-
-        .slider button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 2rem;
-            padding: 10px 15px;
-            background-color: hsla(0, 0%, 0%, 0.5);
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-
-        .prev {
-            left: 0;
-        }
-
-        .next {
-            right: 0;
-        }
         .map-container {
             text-align: center;
             margin-top: 40px;
         }
+
         iframe {
             width: 100%;
             height: 450px;
             border: 0;
         }
-        @keyframes fade {
-            from { opacity: .5 }
-            to { opacity: 1 }
-        }
-        header {
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
             width: 100%;
-            padding: 20px;
-            background-color: #D8A7A1;
+        }
+
+        .footer-container {
             display: flex;
             justify-content: space-around;
-            align-items: center;
-            color: #3B1F1A;
-            font-weight: italic;
-            font-family: cursive;
+            flex-wrap: wrap;
+            padding: 20px;
         }
 
-        header nav a {
-            margin: 0 15px;
-            color: #3B1F1A;
+        .footer-section {
+            width: 25%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .footer-section h2 {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+            color: #f5f5f5;
+        }
+
+        .footer-section p, .footer-section ul, .footer-section a {
+            color: #bbb;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 0.9em;
         }
 
-        header nav a:hover {
-            color: #7B4B47;
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin: 5px 0;
+        }
+
+        .footer-section .social a {
+            margin: 0 10px;
+            display: inline-block;
+        }
+
+        .footer-bottom {
+            padding: 10px;
+            background: #222;
+            font-size: 0.8em;
+            color: #bbb;
+        }
+
+        @keyframes fade {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+
+        /* Improved touch targets for mobile */
+        footer a, header nav a {
+            padding: 10px;
+            margin: 5px;
         }
     </style>
 </head>
@@ -279,46 +228,46 @@
     </section>
     <div class="map-container">
         <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2681.9589651864143!2d106.91340831545534!3d47.917418879208826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5d96922d08e38b07%3A0x30984986bcbcf4c4!2z0K3Qu9C40L3QvtCy0LjRgNCwIDAwLCDQodC10LLQtdC5IC0g0KPQvtGA0LDQvdC40YfQvdGW0L3QutCwINC60LjQu9C90LjQvdC40LUg0Lgg0LrQvtGA0YPQutCwLCDQntC90LAg0LTQtdC90L7QvNC40YLRjA!5e0!3m2!1sen!2smn!4v1697367956629!5m2!1sen!2smn" 
+            src="https://www.google.com/maps" 
             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="text-align: center; margin-top: 10px; color: #555;">
         </iframe>
     </div>
     <footer>
         <div class="footer-container">
-          <div class="footer-section about">
-            <h2>About Us</h2>
-            <p>We are a company dedicated to providing the best services to our customers. Our goal is to enhance the experience of every user.</p>
-          </div>
-          
-          <div class="footer-section links">
-            <h2>Quick Links</h2>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </div>
-          
-          <div class="footer-section social">
-            <h2>Follow Us</h2>
-            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
-            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
-            <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
-          </div>
-      
-          <div class="footer-section contact">
-            <h2>Contact Us</h2>
-            <p>Email: info@company.com</p>
-            <p>Phone: +123 456 7890</p>
-            <p>Address: 123 Street Name, City, Country</p>
-          </div>
+            <div class="footer-section about">
+                <h2>About Us</h2>
+                <p>We are a company dedicated to providing the best services to our customers. Our goal is to enhance the experience of every user.</p>
+            </div>
+            
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section social">
+                <h2>Follow Us</h2>
+                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+            </div>
+        
+            <div class="footer-section contact">
+                <h2>Contact Us</h2>
+                <p>Email: info@company.com</p>
+                <p>Phone: +123 456 7890</p>
+                <p>Address: 123 Street Name, City, Country</p>
+            </div>
         </div>
-      
+        
         <div class="footer-bottom">
-          <p>&copy; 2023 Your Company Name. All rights reserved.</p>
+            <p>&copy; 2023 Your Company Name. All rights reserved.</p>
         </div>
-      </footer>
+    </footer>
 </body>
 </html>
