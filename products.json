@@ -5,8 +5,8 @@
         "category": "Dessert",
         "brand": "Cafe Delights",
         "price": 10,
-        "image": "https://via.placeholder.com/150",
-        "description": "Орео жигнэмэгтэй матча бровни."
+        "image": "u.jpg",
+        "description": "Орео жигнэмэгтэй дессерт"
     },
     {
         "id": 2,
@@ -14,8 +14,8 @@
         "category": "Cake",
         "brand": "Delicious Cakes",
         "price": 20,
-        "image": "https://via.placeholder.com/150",
-        "description": "Шинэхэн жимс, амтат шоколадаар хийгдсэн бялуу."
+        "image": "r.jpg",
+        "description": "Жимс болон шоколодаар хийгдсэн бялуу"
     },
     {
         "id": 3,
@@ -23,8 +23,8 @@
         "category": "Bread",
         "brand": "Bakery Fresh",
         "price": 5,
-        "image": "https://via.placeholder.com/150",
-        "description": "Туна, корн, майонезын хачиртай талх."
+        "image": "cake.jpg",
+        "description": "Туна болон ургамлын амттай талх"
     },
     {
         "id": 4,
@@ -32,8 +32,8 @@
         "category": "Salad",
         "brand": "Healthy Life",
         "price": 8,
-        "image": "https://via.placeholder.com/150",
-        "description": "Шинэхэн жимсний хольц."
+        "image": "u.jpg",
+        "description": "Шинэ ногооны салат"
     },
     {
         "id": 5,
@@ -41,7 +41,142 @@
         "category": "Food",
         "brand": "Pizzeria",
         "price": 15,
-        "image": "https://via.placeholder.com/150",
-        "description": "Бялуу зоогийн пицца."
+        "image": "r.jpg",
+        "description": "Бялуу хэлбэрийн пицца"
+    },
+    {
+        "id": 6,
+        "name": "Chocolate Lava Cake",
+        "category": "Dessert",
+        "brand": "Sweet Treats",
+        "price": 12,
+        "image": "lava.jpg",
+        "description": "Дотор нь шингэн шоколадтай амтат бялуу"
+    },
+    {
+        "id": 7,
+        "name": "Strawberry Shortcake",
+        "category": "Cake",
+        "brand": "Cake Haven",
+        "price": 18,
+        "image": "strawberry.jpg",
+        "description": "Гүзээлзгэнэтэй, сүүн кремтэй бялуу"
+    },
+    {
+        "id": 8,
+        "name": "French Baguette",
+        "category": "Bread",
+        "brand": "French Bakery",
+        "price": 4,
+        "image": "baguette.jpg",
+        "description": "Зөөлөн, хөнгөн Франц багет"
+    },
+    {
+        "id": 9,
+        "name": "Classic Caesar Salad",
+        "category": "Salad",
+        "brand": "Green Eats",
+        "price": 7,
+        "image": "caesar.jpg",
+        "description": "Цезарь сүмстэй, шинэхэн ногоотой салат"
+    },
+    {
+        "id": 10,
+        "name": "Pepperoni Pizza",
+        "category": "Food",
+        "brand": "Pizza House",
+        "price": 16,
+        "image": "pepperoni.jpg",
+        "description": "Жинхэнэ амттай пепперони пицца"
+    },
+    {
+        "id": 11,
+        "name": "Chocolate Chip Muffin",
+        "category": "Dessert",
+        "brand": "Sweet Snacks",
+        "price": 3,
+        "image": "muffin.jpg",
+        "description": "Шоколадтай чиптэй амтат маффин"
+    },
+    {
+        "id": 12,
+        "name": "Red Velvet Cake",
+        "category": "Cake",
+        "brand": "Cake Delights",
+        "price": 25,
+        "image": "velvet.jpg",
+        "description": "Тансаг улаан хилэн бялуу"
+    },
+    {
+        "id": 13,
+        "name": "Garlic Bread",
+        "category": "Bread",
+        "brand": "Garlic Bakery",
+        "price": 6,
+        "image": "garlic.jpg",
+        "description": "Сармисны амттай зөөлөн талх"
+    },
+    {
+        "id": 14,
+        "name": "Greek Salad",
+        "category": "Salad",
+        "brand": "Fresh Greens",
+        "price": 9,
+        "image": "greek.jpg",
+        "description": "Грек маягийн ногооны салат"
+    },
+    {
+        "id": 15,
+        "name": "BBQ Chicken Pizza",
+        "category": "Food",
+        "brand": "Pizza Mania",
+        "price": 18,
+        "image": "bbq.jpg",
+        "description": "Шарсан тахиатай амтат пицца"
+    },
+    {
+        "id": 16,
+        "name": "Vanilla Pudding",
+        "category": "Dessert",
+        "brand": "Pudding World",
+        "price": 5,
+        "image": "pudding.jpg",
+        "description": "Амтат ванилийн пудинг"
+    },
+    {
+        "id": 17,
+        "name": "Black Forest Cake",
+        "category": "Cake",
+        "brand": "Forest Bakes",
+        "price": 22,
+        "image": "blackforest.jpg",
+        "description": "Гүнждийн кремтэй бялуу"
+    },
+    {
+        "id": 18,
+        "name": "Whole Wheat Bread",
+        "category": "Bread",
+        "brand": "Healthy Bakes",
+        "price": 7,
+        "image": "wheat.jpg",
+        "description": "Үр тарианы амтат талх"
+    },
+    {
+        "id": 19,
+        "name": "Caesar Wrap Salad",
+        "category": "Salad",
+        "brand": "Salad Wraps",
+        "price": 11,
+        "image": "wrap.jpg",
+        "description": "Цезарь салаттай боов"
+    },
+    {
+        "id": 20,
+        "name": "Margherita Pizza",
+        "category": "Food",
+        "brand": "Classic Pizzeria",
+        "price": 14,
+        "image": "margherita.jpg",
+        "description": "Моцарелла, улаан лоольтой пицца"
     }
 ]
