@@ -1,8 +1,12 @@
 async function fetchProducts() {
     try {
-        const response = await fetch('products.json'); // Локал JSON файлыг татах
+        const response = await fetch('products.json');
         const products = await response.json();
         renderProducts(products);
+
+        // Add event listener to the category filter
+        const categorySelect = document.getElementById('category');
+        categorySelect.addEventListener('change', () => filterProducts(products));
     } catch (error) {
         console.error('Өгөгдөл татахад алдаа гарлаа:', error);
     }
@@ -25,19 +29,16 @@ function renderProducts(products) {
     });
 }
 
-function filterProducts() {
+function filterProducts(products) {
     const categorySelect = document.getElementById('category');
     const selectedCategory = categorySelect.value;
 
-    fetch('products.json')
-        .then(response => response.json())
-        .then(products => {
-            const filteredProducts = selectedCategory === 'all'
-                ? products
-                : products.filter(product => product.category === selectedCategory);
-            renderProducts(filteredProducts);
-        });
+    const filteredProducts = selectedCategory === 'all'
+        ? products
+        : products.filter(product => product.category === selectedCategory);
+
+    renderProducts(filteredProducts);
 }
 
-// Дата ачаалах функцыг дуудаж эхэлнэ
+// Start by loading products and setting up the filter
 fetchProducts();
