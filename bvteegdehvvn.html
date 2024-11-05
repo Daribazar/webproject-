@@ -61,6 +61,40 @@
             font-size: 0.8em;
             color: #bbb;
         }
+        
+        .container {
+            display: flex;
+        }
+
+        .sidebar {
+            width: 20%;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .product-section {
+            width: 80%;
+            padding: 20px;
+        }
+
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .product-item {
+            width: 200px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .product-item img {
+            max-width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body>
@@ -73,17 +107,20 @@
             <a href="zahialga.html">Худалдан авалт</a>
         </nav>
     </header>
+    
     <div class="container">
         <!-- Sidebar Section -->
         <aside class="sidebar">
             <h2>АНГИЛАЛ</h2>
-            <ul class="category-list">
-                <li>Дессерт</li>
-                <li>Бялуу</li>
-                <li>Талх</li>
-                <li>Салат</li>
-                <li>Хоол</li>
-            </ul>
+            <label for="category">Бүтээгдэхүүний төрөл сонгох:</label>
+            <select id="category">
+                <option value="all">Бүгд</option>
+                <option value="Dessert">Дессерт</option>
+                <option value="Cake">Бялуу</option>
+                <option value="Bread">Талх</option>
+                <option value="Salad">Салат</option>
+                <option value="Food">Хоол</option>
+            </select>
             <div class="extra-info">
                 ХҮРГЭЛТИЙН НӨХЦӨЛ & ҮЙЛЧИЛГЭЭНИЙ НӨХЦӨЛ
             </div>
@@ -92,29 +129,8 @@
         <!-- Main Product Section -->
         <div class="product-section">
             <h1>Бүтээгдэхүүний жагсаалт</h1>
-            <div class="product-list">
-                <div class="product-item">
-                    <img src="u.jpg" alt="Matcha Cookie Brownie">
-                    <h3>MATCHA COOKIE BROWNIE</h3>
-                    <span class="product-category">Дессерт</span>
-                    <p class="description">Орео жигнэмэгтэй матч бровни. Матчаны сэргээх амт, шоколадны тааламжит амтыг Матча бровнигоос мэдрээрэй. Халуун кофетой хамгийн их тохирно.</p>
-                </div>
-                <div class="product-item">
-                    <img src="cake.jpg" alt="Matcha Layer Pastry">
-                    <h3>MATCHA LAYER PASTRY</h3>
-                    <span class="product-category">Талх</span>
-                </div>
-                <div class="product-item">
-                    <img src="r.jpg" alt="All Star Cake">
-                    <h3>ALL STAR CAKE</h3>
-                    <span class="product-category">Бялуу</span>
-                </div>
-                <div class="product-item">
-                    <img src="tuna-corn-bread.jpg" alt="Tuna Corn Mayonnaise Bread">
-                    <h3>TUNA CORN MAYONNAISE BREAD</h3>
-                    <span class="product-category">Талх</span>
-                </div>
-                <!-- Add more product items as needed -->
+            <div id="product-list" class="product-list">
+                <!-- Products will be loaded here dynamically -->
             </div>
         </div>
     </div>
@@ -124,31 +140,32 @@
         <div class="footer-container">
             <div class="footer-section about">
                 <h2>About Us</h2>
-                <p>We are a company dedicated to providing the best services to our customers. Our goal is to enhance the experience of every user.</p>
+                <p>Манай компани хэрэглэгчдэд хамгийн сайн үйлчилгээг хүргэх зорилготой бөгөөд хэрэглэгчийн туршлагыг дээшлүүлэхэд анхаардаг.</p>
             </div>
             
             <div class="footer-section links">
-                <h2>Quick Links</h2>
+                <h2>Quick Contact</h2>
                 <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="zahialga.html">About</a></li>
-                    <li><a href="sanalhuselt.html">Services</a></li>
-                    <li><a href="uilchilgee.html">Contact</a></li>
+                    <li><a href="home.html">Нүүр хуудас</a></li>
+                    <li><a href="zahialga.html">Захиалга</a></li>
+                    <li><a href="sanalhuselt.html">Үйлчилгээ</a></li>
+                    <li><a href="uilchilgee.html">Холбоо барих</a></li>
                 </ul>
             </div>
             
             <div class="footer-section social">
-                <h2>Follow Us</h2>
+                <h2>Бидэнтэй холбогдох</h2>
                 <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-                <a href=""><img src="twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
                 <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
                 <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
             </div>
+            
             <div class="footer-section contact">
-                <h2>Contact Us</h2>
-                <p>Email: info@company.com</p>
-                <p>Phone: +97691659994</p>
-                <p>Address: 123 Street Name, City, Country</p>
+                <h2>Холбоо барих</h2>
+                <p>И-мэйл: info@company.com</p>
+                <p>Утас: +97691659994</p>
+                <p>Хаяг: 123 Гудамж, Хот, Улс</p>
             </div>
         </div>
       
@@ -156,5 +173,7 @@
             <p>&copy; 2024 "Delicious Bakery's Website"</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
