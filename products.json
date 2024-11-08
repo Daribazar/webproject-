@@ -5,8 +5,9 @@
         "category": "Dessert",
         "brand": "Cafe Delights",
         "price": 10,
-        "image": "u.jpg",
+        "image": "/image/u.jpg",
         "description": "Орео жигнэмэгтэй дессерт"
+        
     },
     {
         "id": 2,
@@ -14,7 +15,7 @@
         "category": "Cake",
         "brand": "Delicious Cakes",
         "price": 20,
-        "image": "r.jpg",
+        "image": "/image/u.jpg",
         "description": "Жимс болон шоколодаар хийгдсэн бялуу"
     },
     {
@@ -23,7 +24,7 @@
         "category": "Bread",
         "brand": "Bakery Fresh",
         "price": 5,
-        "image": "cake.jpg",
+        "image": "/image/u.jpg",
         "description": "Туна болон ургамлын амттай талх"
     },
     {
@@ -32,7 +33,7 @@
         "category": "Salad",
         "brand": "Healthy Life",
         "price": 8,
-        "image": "u.jpg",
+        "image": "/image/u.jpg",
         "description": "Шинэ ногооны салат"
     },
     {
@@ -41,7 +42,7 @@
         "category": "Food",
         "brand": "Pizzeria",
         "price": 15,
-        "image": "r.jpg",
+        "image": "/image/u.jpg",
         "description": "Бялуу хэлбэрийн пицца"
     },
     {
@@ -50,7 +51,7 @@
         "category": "Dessert",
         "brand": "Sweet Treats",
         "price": 12,
-        "image": "lava.jpg",
+        "image": "/image/u.jpg",
         "description": "Дотор нь шингэн шоколадтай амтат бялуу"
     },
     {
@@ -59,7 +60,7 @@
         "category": "Cake",
         "brand": "Cake Haven",
         "price": 18,
-        "image": "strawberry.jpg",
+        "image": "/image/u.jpg",
         "description": "Гүзээлзгэнэтэй, сүүн кремтэй бялуу"
     },
     {
@@ -68,7 +69,7 @@
         "category": "Bread",
         "brand": "French Bakery",
         "price": 4,
-        "image": "baguette.jpg",
+        "image": "/image/u.jpg",
         "description": "Зөөлөн, хөнгөн Франц багет"
     },
     {
@@ -77,7 +78,7 @@
         "category": "Salad",
         "brand": "Green Eats",
         "price": 7,
-        "image": "caesar.jpg",
+        "image": "/image/u.jpg",
         "description": "Цезарь сүмстэй, шинэхэн ногоотой салат"
     },
     {
@@ -86,7 +87,7 @@
         "category": "Food",
         "brand": "Pizza House",
         "price": 16,
-        "image": "pepperoni.jpg",
+        "image": "/image/u.jpg",
         "description": "Жинхэнэ амттай пепперони пицца"
     },
     {
@@ -95,7 +96,7 @@
         "category": "Dessert",
         "brand": "Sweet Snacks",
         "price": 3,
-        "image": "muffin.jpg",
+        "image": "/image/u.jpg",
         "description": "Шоколадтай чиптэй амтат маффин"
     },
     {
@@ -104,7 +105,7 @@
         "category": "Cake",
         "brand": "Cake Delights",
         "price": 25,
-        "image": "velvet.jpg",
+        "image": "/image/u.jpg",
         "description": "Тансаг улаан хилэн бялуу"
     },
     {
@@ -113,7 +114,7 @@
         "category": "Bread",
         "brand": "Garlic Bakery",
         "price": 6,
-        "image": "garlic.jpg",
+        "image": "/image/u.jpg",
         "description": "Сармисны амттай зөөлөн талх"
     },
     {
@@ -122,7 +123,7 @@
         "category": "Salad",
         "brand": "Fresh Greens",
         "price": 9,
-        "image": "greek.jpg",
+        "image": "/image/u.jpg",
         "description": "Грек маягийн ногооны салат"
     },
     {
@@ -131,7 +132,7 @@
         "category": "Food",
         "brand": "Pizza Mania",
         "price": 18,
-        "image": "bbq.jpg",
+        "image": "/image/u.jpg",
         "description": "Шарсан тахиатай амтат пицца"
     },
     {
@@ -140,7 +141,7 @@
         "category": "Dessert",
         "brand": "Pudding World",
         "price": 5,
-        "image": "pudding.jpg",
+        "image": "/image/u.jpg",
         "description": "Амтат ванилийн пудинг"
     },
     {
@@ -149,7 +150,7 @@
         "category": "Cake",
         "brand": "Forest Bakes",
         "price": 22,
-        "image": "blackforest.jpg",
+        "image": "/image/u.jpg",
         "description": "Гүнждийн кремтэй бялуу"
     },
     {
@@ -158,7 +159,7 @@
         "category": "Bread",
         "brand": "Healthy Bakes",
         "price": 7,
-        "image": "wheat.jpg",
+        "image": "/image/u.jpg",
         "description": "Үр тарианы амтат талх"
     },
     {
@@ -167,7 +168,7 @@
         "category": "Salad",
         "brand": "Salad Wraps",
         "price": 11,
-        "image": "wrap.jpg",
+        "image": "/image/u.jpg",
         "description": "Цезарь салаттай боов"
     },
     {
@@ -176,7 +177,7 @@
         "category": "Food",
         "brand": "Classic Pizzeria",
         "price": 14,
-        "image": "margherita.jpg",
+        "image": "/image/u.jpg",
         "description": "Моцарелла, улаан лоольтой пицца"
     }
 ]
