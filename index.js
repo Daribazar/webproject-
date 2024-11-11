@@ -13,6 +13,8 @@ function initializeSlider(){
     }
 }
 
+console.log("odko <3")
+
 function showSlide(index){
     if(index >= slides.length){
         slideIndex = 0;
