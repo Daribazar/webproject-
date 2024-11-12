@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="mn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Page</title>
     <link rel="stylesheet" href="bvteegdehvvn.css">
-
 </head>
 <body>
     <header>
@@ -21,7 +20,7 @@
         <!-- Sidebar Section -->
         <aside class="sidebar">
             <h2>АНГИЛАЛ</h2>
-            <label for="category">Бүтээгдэхүүний төрөл сонгох:</label>
+            <label for="category">Бүтээгдэхүүний төрөл:</label>
             <select id="category">
                 <option value="all">Бүгд</option>
                 <option value="Dessert">Дессерт</option>
@@ -38,48 +37,18 @@
         <!-- Main Product Section -->
         <div class="product-section">
             <h1>Бүтээгдэхүүний жагсаалт</h1>
-            <div id="product-list" class="product-list">
-                <!-- Products will be loaded here dynamically -->
-            </div>
+            <div id="product-list" class="product-list"></div>
         </div>
     </div>
-    <!-- Footer Section -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-section about">
-                <h2>About Us</h2>
-                <p>We are a company dedicated to providing the best services to our customers. Our goal is to enhance the experience of every user.</p>
-            </div>
-            <div class="footer-section links">
-                <h2>Quick Links</h2>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-section social">
-                <h2>Follow Us</h2>
-                <a href="#"><img src="facebook-icon.png" alt="Facebook" width="20" height="20"></a>
-                <a href="#"><img src="twitter-icon.png" alt="Twitter" width="20" height="20"></a>
-                <a href="#"><img src="instagram-icon.png" alt="Instagram" width="20" height="20"></a>
-                <a href="#"><img src="linkedin-icon.png" alt="LinkedIn" width="20" height="20"></a>
-            </div>
-
-            <div class="footer-section contact">
-                <h2>Contact Us</h2>
-                <p>Email: info@company.com</p>
-                <p>Phone: +123 456 7890</p>
-                <p>Address: 123 Street Name, City, Country</p>
-            </div>
+    <!-- Modal for Product Details -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title">Product Title</h2>
+            <p id="modal-price">Product Price</p>
+            <p id="modal-description">Product Description</p>
         </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2023 Your Company Name. All rights reserved.</p>
-        </div>
-    </footer>
-    <script src="script.js"></script>
+    </div>
+    <script src="index.js"></script>
 </body>
 </html>
