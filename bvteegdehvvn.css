@@ -239,6 +239,28 @@ header nav a:hover {
     overflow: auto;
 }
 
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-right: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #9a7c7c;
+    color: black;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3ms;
+  }
+  
+  .btn:hover {
+    background-color: darken(pink, 10%);
+  }
+
 .modal-content {
     background-color: #fefefe;
     margin: 15% auto;
