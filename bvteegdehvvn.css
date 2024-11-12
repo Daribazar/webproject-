@@ -126,7 +126,6 @@ header nav a:hover {
     margin: 20px auto;
 }
 
-/* Sidebar Styles */
 .sidebar {
     width: 220px;
     background-color: #F5E1DC;
@@ -140,7 +139,7 @@ header nav a:hover {
 .sidebar h2 {
     font-size: 22px;
     margin-bottom: 20px;
-    border-bottom: 1px solid #E0BA76;
+    border-bottom: 1px solid #D8A7A1;
     padding-bottom: 10px;
 }
 
@@ -156,15 +155,6 @@ header nav a:hover {
 
 .category-list li:hover {
     color: #FFF;
-}
-
-.extra-info {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #E0BA76;
-    color: #D8A7A1;
-    border-radius: 5px;
-    font-weight: bold;
 }
 
 /* Product Section Styles */
@@ -226,9 +216,9 @@ header nav a:hover {
     color: #D8A7A1;
     margin-top: 10px;
 }
-/* Modal Styles */
+
 .modal {
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed;
     z-index: 1;
     left: 0;
