@@ -48,7 +48,7 @@ function filterProducts(products) {
 // Бүтээгдэхүүний дэлгэрэнгүй мэдээллийг modal-д харуулах функц
 function showProductDetails(product) {
     // Modal-ийн элементийн контентыг шинэчлэх
-    document.getElementById('modal-image').textContent = product.image;
+    document.getElementById('modal-image').src = product.image;
     document.getElementById('modal-title').textContent = product.name;
     document.getElementById('modal-price').textContent = `Үнэ: ${product.price}`;
     document.getElementById('modal-description').textContent = product.description;
@@ -57,7 +57,6 @@ function showProductDetails(product) {
     const modal = document.getElementById('product-modal');
     modal.style.display = 'block';
 }
-
 // Modal-г хаах функц
 function closeModal() {
     const modal = document.getElementById('product-modal');

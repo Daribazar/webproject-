@@ -239,7 +239,7 @@ header nav a:hover {
     overflow: auto;
 }
 
-.product-image {
+img {
     width: 100%;
     height: auto;
     border-radius: 8px;
@@ -249,7 +249,7 @@ header nav a:hover {
 
 .btn {
     display: inline-block;
-    background-color: #9a7c7c;
+    background-color: #D8A7A1;
     color: black;
     padding: 0.75rem 1.5rem;
     text-decoration: none;
