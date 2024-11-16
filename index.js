@@ -58,7 +58,6 @@ function showProductDetails(product) {
     const modal = document.getElementById('product-modal');
     modal.style.display = 'block';
 }
-
 // Modal-г хаах функц
 function closeModal() {
     const modal = document.getElementById('product-modal');

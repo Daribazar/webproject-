@@ -159,7 +159,6 @@
         footer {
             background: #9a7c7c;
             color: #171616;
-            padding: 40px 0 20px;
             width: 100%;
             text-align: center;
             margin: 0;
@@ -216,7 +215,7 @@
             background: #463232;
             font-size: 0.8em;
             color: #bbb;
-            margin-top: 20px;
+            margin-bottom: 0;
         }
     </style>
 </head>
@@ -238,47 +237,22 @@
     </section>
     <section class="product-section">
         <div class="product-card">
-            <img src="/webproject-/image/u.jpg" alt="Handmade Pretzels">
+            <img src="/image/u.jpg" alt="Handmade Pretzels">
             <h3>Handmade Pretzels</h3>
             <p>Traditional pretzels with a touch of honey</p>
         </div>
         <div class="product-card">
-            <img src="/webproject-/image/u.jpg" alt="Wheat Cookies">
+            <img src="/image/u.jpg" alt="Wheat Cookies">
             <h3>Wheat Cookies</h3>
             <p>Traditional cookies with chocolate particles</p>
         </div>
         <div class="product-card">
-            <img src="/webproject-/image/r.jpg" alt="Sesame Cookies">
+            <img src="/image/r.jpg" alt="Sesame Cookies">
             <h3>Sesame Cookies</h3>
             <p>Wheat cookies made like by your Grandma</p>
         </div>
     </section>
-    <style>
-        #main-banner {
-            width: 100%;
-            height: 300px;
-            background-size: cover;
-            background-position: center;
-            transition: background-image 1s ease-in-out; /* Зөөлөн шилжилтийн анимац нэмэх */
-        }
-    </style>
-    <script>
-        const banner = document.getElementById('main-banner');
-        const images = [
-            'url("cake.jpg")',
-            'url("r.jpg")',
-            'url("u.jpg")'
-        ];
-        let currentIndex = 0;
-    
-        function changeBackground() {
-            currentIndex = (currentIndex + 1) % images.length;
-            banner.style.backgroundImage = images[currentIndex];
-        }
-    
-        setInterval(changeBackground, 5000);
-        banner.style.backgroundImage = images[currentIndex];
-    </script>    
+ 
     <footer>
         <div class="footer-container">
             <div class="footer-section about">
