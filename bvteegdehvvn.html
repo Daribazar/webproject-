@@ -51,7 +51,6 @@ header nav a:hover {
     margin: 20px auto;
 }
 
-/* Sidebar Styles */
 .sidebar {
     width: 220px;
     background-color: #F5E1DC;
@@ -92,7 +91,6 @@ header nav a:hover {
     font-weight: bold;
 }
 
-/* Product Section Styles */
 .product-section {
     flex-grow: 1;
     margin-left: 20px;
@@ -106,7 +104,6 @@ header nav a:hover {
     margin-top: 10px;
 }
 
-/* Product List Grid */
 .product-list {
     display: flex;
     flex-wrap: wrap;
@@ -125,7 +122,7 @@ header nav a:hover {
 }
 
 .product-item:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .product-item img {
@@ -156,9 +153,9 @@ header nav a:hover {
     color: #D8A7A1;
     margin-top: 10px;
 }
-/* Modal Styles */
+
 .modal {
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed;
     z-index: 1;
     left: 0;
@@ -305,12 +302,10 @@ footer {
                 ХҮРГЭЛТИЙН НӨХЦӨЛ & ҮЙЛЧИЛГЭЭНИЙ НӨХЦӨЛ
             </div>
         </aside>
-        <!-- Main Product Section -->
         <div class="product-section">
             <div id="product-list" class="product-list"></div>
         </div>
     </div>
-    <!-- Modal for Product Details -->
     <div id="product-modal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
