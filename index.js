@@ -46,7 +46,6 @@ function filterProducts(products) {
 }
 
 // Бүтээгдэхүүний дэлгэрэнгүй мэдээллийг modal-д харуулах функц
-
 function showProductDetails(product) {
     // Modal-ийн элементийн контентыг шинэчлэх
     document.getElementById('modal-image').src = product.image;
