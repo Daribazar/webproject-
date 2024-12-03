@@ -1,5 +1,5 @@
-// Бүтээгдэхүүний мэдээллийг татаж авах, шүүж харуулах үндсэн функц
-async function fetchProducts() {
+// bvteegdehvvni medeellig tataj awch shvvh function
+async function fetchProducts(){
     try {
         const response = await fetch('products.json'); // 'products.json' file-aas bvteegdehvvnvvdig tataj awch baina
         const products = await response.json();
