@@ -47,10 +47,22 @@ function filterProducts(products, selectedCategory = 'all') {
         ? products
         : products.filter(product => product.category === selectedCategory); // yamar category-iig select hiisnes shaltgaalan tuhain bvteegdehvvnig shvvj bui heseg
     renderProducts(filteredProducts);
+//URL-aar shvvh heseg
+    const url = new URL(window.location);
+    url.searchParams.set('category', selectedCategory); // URL-iin heseh shinechlegdeh heseg
+    window.history.pushState({}, '', url); // URL-iin hesgiig deed zamd shinechilj bui heseg
 }
 
-// Бүтээгдэхүүний дэлгэрэнгүй мэдээллийг modal-д харуулах функц
+// bvteegdehvvnii neriig alert-ad haruulj ugch bui heseg
+function showProductDetails(product) {
+    alert(`Дэлгэрэнгүй: ${product.name}`);
+}
 
+//Fetch hiin bvteegdehvvnig tataj awch baina
+fetchProducts();
+
+
+//bvteegdehvvnii delgerengui medeellig modal ashiglan neg tsonhond achaallaj bui heseg
 function showProductDetails(product) {
     // tuhain json file-aas modal-aar duudan ymar medeellig haruulahig json file-aas gargaj irj baina
     document.getElementById('modal-image').src = product.image;
