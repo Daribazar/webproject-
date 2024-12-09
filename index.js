@@ -81,3 +81,85 @@ function closeModal() {
 }
 
 fetchProducts();// fetch hiin medeellig tataj awch bn
+
+// Шоппинг картын иконыг болон хаах товчийг авах
+const cartIcon = document.querySelector('.iconcard');  // Шоппинг картын иконыг сонгох
+const cartTab = document.querySelector('.cardtab');    // Шоппинг картын табыг сонгох
+const closeButton = document.querySelector('.closee'); // Хаах товчийг сонгох
+
+// Шоппинг картыг нээх функц
+function openCart() {
+    cartTab.style.display = 'grid'; // Шоппинг картыг харуулах
+}
+
+// Шоппинг картыг хаах функц
+function closeCart() {
+    cartTab.style.display = 'none'; // Шоппинг картыг нууцлах
+}
+
+// Карт иконыг дарж шоппинг картыг нээхэд зориулсан үйлдэл нэмэх
+cartIcon.addEventListener('click', openCart); // Карт иконыг дархад openCart функц ажиллана
+
+// Хаах товчийг дарж шоппинг картыг хаахад зориулсан үйлдэл нэмэх
+closeButton.addEventListener('click', closeCart); // Хаах товчийг дархад closeCart функц ажиллана
+
+// Add these variables at the top of your file
+let cartItems = [];  // Картын бүтээгдэхүүнүүдийг хадгалах массив
+let cartTotal = 0;   // Картын нийт үнийн дүн
+
+// Бүтээгдэхүүнийг шоппинг карт руу нэмэх функц
+function addToCart(event) {
+    event.preventDefault(); // Бүтээгдэхүүн нэмэх үед хуудсийг шинэчлэхээс сэргийлэх
+    
+    // Модалын бүтээгдэхүүний мэдээллийг авах
+    const name = document.getElementById('modal-title').textContent; // Бүтээгдэхүүний нэр
+    const priceText = document.getElementById('modal-price').textContent; // Бүтээгдэхүүний үнэ (текст)
+    
+    // "Үнэ: 1234" форматнаас зөвхөн тоог гаргаж авах
+    const price = parseFloat(priceText.replace(/[^0-9]/g, '')); // Үнэ нь тоон утга болгох
+    
+    // Карт дахь бүтээгдэхүүний объект үүсгэх
+    const item = {
+        name: name,  // Бүтээгдэхүүний нэр
+        price: price // Бүтээгдэхүүний үнэ
+    };
+    
+    // Карт руу бүтээгдэхүүн нэмэх
+    cartItems.push(item); // Бүтээгдэхүүнийг cartItems массив руу нэмэх
+    
+    // Картын нийт үнийн дүнг шинэчлэх
+    cartTotal += item.price; // Үнийн дүнг нэмэх
+    
+    // Картын тоог шинэчлэх
+    const counter = document.getElementById('cart-counter'); // Картын тоог үзүүлэх элементийг авах
+    counter.textContent = cartItems.length; // Картын бүтээгдэхүүний тоог шинэчлэх
+    
+    // Картын харуулалтыг шинэчлэх
+    updateCartDisplay(); // updateCartDisplay функцыг дуудах
+    
+    // Модалыг хаах
+    closeModal(); // Модалыг хаах функц дуудах
+}
+
+// Картын харуулалтыг шинэчлэх функц
+function updateCartDisplay() {
+    const cartItemsDiv = document.getElementById('cart-items'); // Картын бүтээгдэхүүнүүдийг үзүүлэх элементийг авах
+    const cartTotalDiv = document.getElementById('cart-total'); // Картын нийт үнийн дүнг үзүүлэх элементийг авах
+    
+    // Одоогийн үзүүлж байгаа бүтээгдэхүүнүүдийг цэвэрлэх
+    cartItemsDiv.innerHTML = ''; // Үндсэн дэлгэцийн контентийг устгах
+    
+    // Бүтээгдэхүүн бүрийг дэлгэцэнд нэмэх
+    cartItems.forEach(item => {
+        const itemDiv = document.createElement('div');  // Шинэ div элемент үүсгэх
+        itemDiv.className = 'cart-item';  // Класс нэмэх
+        itemDiv.innerHTML = `
+            <span>${item.name}</span>  // Бүтээгдэхүүний нэр
+            <span>$${item.price}</span>  // Бүтээгдэхүүний үнэ
+        `;
+        cartItemsDiv.appendChild(itemDiv);  // Шинээр үүсгэсэн div элементийг картын бүтээгдэхүүнүүдийн хэсэгт нэмэх
+    });
+    
+    // Нийт үнийн дүнг шинэчлэх
+    cartTotalDiv.textContent = `Total: $${cartTotal}`;  // Нийт үнийн дүнг харуулах
+}
