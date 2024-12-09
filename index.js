@@ -123,12 +123,15 @@ function addToCart(event) {
     closeModal();
 }
 
-function removeFromCart(index) {
-    // Сагснаас тухайн индексийн барааг устгах
+function removeFromCart(index, event) {
+    // Үйл явдлын тархалтыг зогсоох
+    event.stopPropagation();
+    
+    // Сагсны жагсаалтаас элемент устгах
     const removedItem = cartItems.splice(index, 1)[0];
-    // Үнийн дүнг нийтээс хасах
+    // Нийт үнийн дүнгээс тухайн барааны үнийг хасах
     cartTotal -= removedItem.price;
-    // Сагсны тоог шинэчлэх
+    // Сагсны барааны тоог шинэчлэх
     const counter = document.getElementById('cart-counter');
     counter.textContent = cartItems.length;
     // Сагсны дэлгэцийг шинэчлэх
@@ -147,7 +150,7 @@ function updateCartDisplay() {
         itemDiv.innerHTML = `
             <span>${item.name}</span>
             <span>$${item.price}</span>
-            <button onclick="removeFromCart(${index})" class="remove-btn">X</button>
+            <button onclick="removeFromCart(${index}, event)" class="remove-btn">X</button>
         `;
         cartItemsDiv.appendChild(itemDiv);
     });
