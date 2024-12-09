@@ -47,20 +47,22 @@ header nav a:hover {
 
 header .iconcard{
     position: relative;
+    cursor: pointer;
 }
 
 header .iconcard span{
     display: flex;
     height: 25px;
     width: 25px;
-    background-color: red;
+    background-color: #F5E1DC;
     justify-content: center;
     align-items: center;
-    color: #FFF;
+    color: #000;
     border-radius: 50%;
     position: absolute;
     top: 50%;
     left: 50%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
@@ -297,8 +299,11 @@ footer {
     color: #eee;
     position: fixed;
     inset: 0 0 0 auto;
-    display: grid;
+    display: none;
     grid-template-rows: 70px 1fr 70px;
+    z-index: 1000;
+    height: 100vh;
+    overflow-y: auto;
 }
 .cardtab h1{
     padding: 20px;
@@ -308,6 +313,7 @@ footer {
 .cardtab .listbtn{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    padding: 5px;
 }
 
 .cardtab .listbtn button{
@@ -316,14 +322,21 @@ footer {
     font-family: poppins;
     font-weight: 500;
     cursor: pointer;
+
+    
 }
 .cardtab .listbtn .closee{
     background-color: #F5E1DC;
+    margin-right: 2.5px;
+}
+.cardtab .listbtn .checkout{
+    margin-left: 2.5px;
 }
 
 .cart-item {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 10px;
     border-bottom: 1px solid #eee;
     color: #fff;
@@ -339,6 +352,17 @@ footer {
 .listcard {
     overflow-y: auto;
     padding: 10px;
+}
+
+.remove-btn {
+    background-color: #353432;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: 10px;
 }
 
 </style>
@@ -370,7 +394,7 @@ footer {
                     <option value="all">Бүгд</option>
                     <option value="Dessert">Дессерт</option>
                     <option value="Cake">Бялуу</option>
-                    <option value="Bread">Талх</option>
+                    <option value="Bread">Та��х</option>
                     <option value="Salad">Салат</option>
                     <option value="Food">Хоол</option>
                 </select>

@@ -89,6 +89,16 @@ function closeCart() {
 cartIcon.addEventListener('click', openCart);
 closeButton.addEventListener('click', closeCart);
 
+// Гадуур дарж, карт хаах
+window.addEventListener('click', function(event) {
+    const cartTab = document.querySelector('.cardtab');
+    const cartIcon = document.querySelector('.iconcard');
+    
+    if (!cartTab.contains(event.target) && !cartIcon.contains(event.target)) {
+        closeCart();
+    }
+});
+
 // Картын удирдлагын хувьсагчид
 let cartItems = [];
 let cartTotal = 0;
@@ -113,18 +123,31 @@ function addToCart(event) {
     closeModal();
 }
 
+function removeFromCart(index) {
+    // Сагснаас тухайн индексийн барааг устгах
+    const removedItem = cartItems.splice(index, 1)[0];
+    // Үнийн дүнг нийтээс хасах
+    cartTotal -= removedItem.price;
+    // Сагсны тоог шинэчлэх
+    const counter = document.getElementById('cart-counter');
+    counter.textContent = cartItems.length;
+    // Сагсны дэлгэцийг шинэчлэх
+    updateCartDisplay();
+}
+
 function updateCartDisplay() {
     const cartItemsDiv = document.getElementById('cart-items');
     const cartTotalDiv = document.getElementById('cart-total');
 
     cartItemsDiv.innerHTML = '';
 
-    cartItems.forEach(item => {
+    cartItems.forEach((item, index) => {
         const itemDiv = document.createElement('div');
         itemDiv.className = 'cart-item';
         itemDiv.innerHTML = `
             <span>${item.name}</span>
             <span>$${item.price}</span>
+            <button onclick="removeFromCart(${index})" class="remove-btn">X</button>
         `;
         cartItemsDiv.appendChild(itemDiv);
     });
