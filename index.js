@@ -107,6 +107,8 @@ function addToCart(event) {
     const counter = document.getElementById('cart-counter');
     counter.textContent = cartItems.length;
 
+    alert(`"${name}" барааг сагсанд амжилттай нэмлээ!`);
+
     updateCartDisplay();
     closeModal();
 }
