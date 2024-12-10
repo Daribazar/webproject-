@@ -6,6 +6,7 @@
   <meta name="description" content="Захиалга хийх форм, НӨАТ авах төрөл, төлбөрийн сонголт, сагс дахь бүтээгдэхүүн">
   <title>Захиалга</title>
   <link rel="stylesheet" href="style.css">
+  <script type="module" src="zahialga-component.js"></script>
   <script>
     
     function validateForm() {
@@ -122,28 +123,7 @@
         </article>
       </section>
 
-      <!-- Сагс -->
-      <section class="sags">
-        <article>
-          <h3>Таны сагс</h3>
-          <label for="cart-items">Сагсанд хийсэн бүтээгдэхүүн:</label>
-          <button id="view-cart-btn">Сагс харах</button>
-        </article>
-      </section>
-
-      <!-- Захиалга -->
-      <section class="zahialga">
-        <article>
-          <h3>Захиалга</h3>
-          <label for="dun">Нийт дүн:</label>
-          <input type="text" id="dun" name="Нийт дүн" placeholder="₮0.00" required readonly>
-        </article>
-        <article>
-          <label for="coupon">Купон ашиглах:</label>
-          <input type="text" id="coupon" name="coupon" placeholder="Купон код оруулна уу">
-          <button type="button">Купон ашиглах</button>
-        </article>
-      </section>
+      <zahialga-component></zahialga-component>
 
       <!-- Үйлчилгээний нөхцөл зөвшөөрөх -->
       <section class="terms-and-conditions">
