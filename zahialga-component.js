@@ -14,17 +14,16 @@ class ZahialgaComponent extends HTMLElement {
   }
 
   render() {
-    this.innerHTML = 
+    this.innerHTML = `
       <h3>Таны сагс</h3>
       <ul>
-        ${this.cartItems.map(item => <li>${item.name} - ₮${item.price}</li>).join('')}
+        ${this.cartItems.map(item => `<li>${item.name} - ₮${item.price}</li>`).join('')}
       </ul>
-      <h2 id="cart-total">Нийт: ₮${this.cartTotal}</h2>
 
       <section class="zahialga">
         <article>
           <h3>Захиалга</h3>
-          <h2 id="cart-total">Нийт: ₮${this.cartTotal}</h2>
+          <h5 id="cart-total">Нийт: ₮${this.cartTotal}</h5>
         </article>
         <article>
           <label for="coupon">Купон ашиглах:</label>
@@ -32,7 +31,7 @@ class ZahialgaComponent extends HTMLElement {
           <button type="button" id="apply-coupon">Купон ашиглах</button>
         </article>
       </section>
-    ;
+    `;
   }
 
   setupCouponHandler() {
@@ -71,4 +70,4 @@ class ZahialgaComponent extends HTMLElement {
   }
 }
 
-window.customElements.define('zahialga-component', ZahialgaComponent);        
+window.customElements.define('zahialga-component', ZahialgaComponent);
