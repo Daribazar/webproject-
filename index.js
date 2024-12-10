@@ -124,17 +124,11 @@ function addToCart(event) {
 }
 
 function removeFromCart(index, event) {
-    // Үйл явдлын тархалтыг зогсоох
     event.stopPropagation();
-    
-    // Сагсны жагсаалтаас элемент устгах
     const removedItem = cartItems.splice(index, 1)[0];
-    // Нийт үнийн дүнгээс тухайн барааны үнийг хасах
     cartTotal -= removedItem.price;
-    // Сагсны барааны тоог шинэчлэх
     const counter = document.getElementById('cart-counter');
     counter.textContent = cartItems.length;
-    // Сагсны дэлгэцийг шинэчлэх
     updateCartDisplay();
 }
 
