@@ -1,5 +1,5 @@
-// Бүтээгдэхүүний мэдээллийг JSON-оос татаж авах функц
-async function fetchProducts() {
+ // Бүтээгдэхүүний мэдээллийг JSON-оос татаж авах функц
+ async function fetchProducts() {
     try {
         const response = await fetch('products.json');
         const products = await response.json();
@@ -105,23 +105,21 @@ let cartTotal = 0;
 
 function addToCart(event) {
     event.preventDefault();
-
-    const name = document.getElementById('modal-title').textContent;
+     const name = document.getElementById('modal-title').textContent;
     const priceText = document.getElementById('modal-price').textContent;
     const price = parseFloat(priceText.replace(/[^0-9]/g, ''));
-
-    const item = { name, price };
+     const item = { name, price };
     cartItems.push(item);
     cartTotal += item.price;
-
-    const counter = document.getElementById('cart-counter');
+     const counter = document.getElementById('cart-counter');
     counter.textContent = cartItems.length;
-
-    alert(`"${name}" барааг сагсанд амжилттай нэмлээ!`);
-
-    updateCartDisplay();
+     alert(`"${name}" барааг сагсанд амжилттай нэмлээ!`);
+     updateCartDisplay();
     closeModal();
-}
+     // Сагсны мэдээллийг localStorage-д хадгалах
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    localStorage.setItem('cartTotal', cartTotal);
+} 
 
 function removeFromCart(index, event) {
     // Үйл явдлын тархалтыг зогсоох
