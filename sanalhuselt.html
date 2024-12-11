@@ -6,120 +6,6 @@
   <meta name="description" content="Санал хүсэлт илгээх хэсэг: Нэр, холбоо барих мэдээлэл, санал хүсэлтээ илгээнэ үү.">
   <title>Санал хүсэлт</title>
   <link rel="stylesheet" href="style1.css">
-  <style>
-    :root {
-      --main-bg-color: #ffffff;
-      --secondary-bg-color: #f9f9f9;
-      --border-color: #555555; /* Darker border for better contrast  asdfasdf */
-      --primary-color: #D8A7A1; /* Darker pink for better readability */
-      --text-color: #222222; /* Darker text color for improved contrast */
-      --hover-color: rgba(210, 54, 149, 0.8); /* Adjusted hover color */
-      --shadow-color: rgba(0, 0, 0, 0.15); /* Slightly darker shadow */
-    }
-    
-    body {
-      font-family: Arial, sans-serif;
-      background-color: var(--main-bg-color);
-      color: var(--text-color);
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    
-    .container {
-      background-color: var(--secondary-bg-color);
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      box-shadow: 0 2px 5px var(--shadow-color);
-      width: 100%;
-      max-width: 500px;
-      padding: 20px;
-      text-align: center;
-    }
-
-    h2 {
-      color: var(--primary-color);
-      margin-bottom: 15px;
-    }
-    
-    label {
-      display: block;
-      margin-bottom: 5px;
-      text-align: left;
-      color: var(--text-color); /* Ensure label text is clear */
-    }
-
-    input[type="text"],
-    textarea {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid var(--border-color);
-      border-radius: 4px;
-      margin-bottom: 15px;
-      transition: border-color 0.3s;
-      color: var(--text-color); /* Input text color */
-      background-color: var(--secondary-bg-color); /* Input background matches the form */
-    }
-    
-    input[type="text"]:focus,
-    textarea:focus {
-      border-color: var(--primary-color);
-    }
-    
-    button {
-      background-color: var(--primary-color);
-      color: white;
-      border: none;
-      border-radius: 4px;
-      padding: 10px 15px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    button:hover {
-      background-color: var(--hover-color);
-    }
-
-    .stars {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px; /* Space between stars */
-      margin-top: 10px;
-    }
-
-    .star-box {
-      border: 2px solid var(--border-color); /* Darker border for better visibility */
-      padding: 10px;
-      border-radius: 8px;
-      display: inline-block;
-      width: fit-content; /* Ensures the star box adjusts its size to content */
-      margin: 0 auto; /* Centers the box in the container */
-      background-color: var(--secondary-bg-color); /* Keep consistent with page style */
-    }
-
-    .stars input[type="radio"] {
-      display: none;
-    }
-    
-    .stars label {
-      font-size: 30px; /* Larger stars */
-      cursor: pointer;
-      color: lightgray; /* Default color for unselected stars */
-    }
-    
-    .stars input[type="radio"]:checked ~ label {
-      color: var(--primary-color); /* Color for selected stars */
-    }
-    
-    .stars label:hover,
-    .stars label:hover ~ label {
-      color: var(--primary-color); /* Hover effect */
-    }
-  </style>
 </head>
 <body>
   <section class="container">
@@ -159,3 +45,119 @@
   </section>
 </body>
 </html>
+
+
+<style>
+  :root {
+    --main-bg-color: #ffffff;
+    --secondary-bg-color: #f9f9f9;
+    --border-color: #555555; /* Darker border for better contrast  asdfasdf */
+    --primary-color: #D8A7A1; /* Darker pink for better readability */
+    --text-color: #222222; /* Darker text color for improved contrast */
+    --hover-color: rgba(210, 54, 149, 0.8); /* Adjusted hover color */
+    --shadow-color: rgba(0, 0, 0, 0.15); /* Slightly darker shadow */
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    background-color: var(--secondary-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px var(--shadow-color);
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    color: var(--text-color); /* Ensure label text is clear */
+  }
+
+  input[type="text"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s;
+    color: var(--text-color); /* Input text color */
+    background-color: var(--secondary-bg-color); /* Input background matches the form */
+  }
+  
+  input[type="text"]:focus,
+  textarea:focus {
+    border-color: var(--primary-color);
+  }
+  
+  button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  button:hover {
+    background-color: var(--hover-color);
+  }
+
+  .stars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Space between stars */
+    margin-top: 10px;
+  }
+
+  .star-box {
+    border: 2px solid var(--border-color); /* Darker border for better visibility */
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
+    width: fit-content; /* Ensures the star box adjusts its size to content */
+    margin: 0 auto; /* Centers the box in the container */
+    background-color: var(--secondary-bg-color); /* Keep consistent with page style */
+  }
+
+  .stars input[type="radio"] {
+    display: none;
+  }
+  
+  .stars label {
+    font-size: 30px; /* Larger stars */
+    cursor: pointer;
+    color: lightgray; /* Default color for unselected stars */
+  }
+  
+  .stars input[type="radio"]:checked ~ label {
+    color: var(--primary-color); /* Color for selected stars */
+  }
+  
+  .stars label:hover,
+  .stars label:hover ~ label {
+    color: var(--primary-color); /* Hover effect */
+  }
+</style>
