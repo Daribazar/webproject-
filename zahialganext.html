@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Захиалга амжилттай">
-  <link rel="stylesheet" href="style.css">
   <title>Захиалга амжилттай</title>
 </head>
 <body>
@@ -14,25 +13,149 @@
         <a href="bvteegdehvvn.html">Бүтээгдэхүүн</a>
         <a href="salbar.html">Салбарын мэдээлэл</a>
         <a href="zahialga.html">Худалдан авалт</a>
-        
     </nav>
 </header>
   <section class="main-container">
     <h1>Захиалга амжилттай хийгдлээ!</h1>
     <p>Таны захиалга амжилттай хийгдэж, бид таны захиалгын мэдээллийг хүлээн авлаа. Та захиалгын дэлгэрэнгүйг И-мэйл хаягтаа авах болно.</p>
-
-    <h3>Таны захиалга:</h3>
-    <ul>
-      <li>Овог, нэр: [Овог нэр]</li>
-      <li>Утасны дугаар: [Утасны дугаар]</li>
-      <li>И-мэйл хаяг: [И-мэйл хаяг]</li>
-      <li>Салбар: [Сонгосон салбар]</li>
-      <li>Төлбөрийн хэлбэр: [Төлбөрийн хэлбэр]</li>
-      <li>Нийт дүн: [₮0.00]</li>
-    </ul>
-
     <p>Та манай вэбсайтад үргэлжлүүлэн хандана уу:</p>
     <button onclick="window.location.href='home.html'">Нүүр хуудас руу буцах</button>
   </section>
 </body>
 </html>
+
+<style>
+  /* zahialga html iin css batmyagmar */
+:root {
+  --main-bg-color: #ffffff;
+  --secondary-bg-color: #f9f9f9;
+  --border-color: #ddd;
+  --primary-color: #D8A7A1;
+  --text-color: #333;
+  --hover-color: #c5827a;
+  --shadow-color: rgba(0, 0, 0, 0.05);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--main-bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0px;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px; /* Багануудын хоорондох зайг нэмэгдүүлсэн */
+}
+
+section {
+  background-color: var(--secondary-bg-color);
+  border: none; /* Хүрээг устгасан */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 1px 3px var(--shadow-color); /* Сүүдрийг зөөлөн болгосон */
+}
+
+h3 {
+  color: var(--primary-color);
+  margin: 0 0 15px 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #eee; /* Илүү гэрэлтэй хүрээ */
+  border-radius: 4px;
+  margin-bottom: 15px;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--primary-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--hover-color);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+article {
+  padding: 15px;
+}
+
+.terms-and-conditions {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px; /* Доод талд нэмэлт зай нэмсэн */
+}
+
+.terms-and-conditions input {
+  margin-right: 10px;
+}
+
+.terms-and-conditions button {
+  margin-left: auto; /* Бутлуурын зүүн талд зайг нэмэх */
+  padding: 10px 20px; /* Товчны доторх зайг нэмэгдүүлсэн */
+  font-size: 16px; /* Товчны текстийн хэмжээг нэмэгдүүлсэн */
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    grid-template-columns: 1fr;
+  }
+}
+        header {
+            width: 100%;
+            padding: 0px;
+            background-color: #D8A7A1;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            color: #3B1F1A;
+            font-weight: italic;
+            font-family: cursive;
+        }
+
+        header nav a {
+            margin: 0 15px;
+            color: #3B1F1A;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        header nav a:hover {
+            color: #7B4B47;
+        }
+
+</style>
