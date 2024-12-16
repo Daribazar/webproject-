@@ -10,19 +10,25 @@ class CategorySidebar extends HTMLElement {
       this.shadowRoot.innerHTML = `
               <style>      
                 .container {
-                    display: flex;
-                    width: 100%;
-                    margin: 20px auto;
-                }
+             display: flex;
+             width: 100%;
+             margin: 20px auto;
+            align-items: flex-start; 
+            }
                 .sidebar {
-                    width: 220px;
-                    background-color: #F5E1DC;
-                    color: #E0BA76;
-                    padding: 20px;
-                    border-radius: 10px;
-                    text-align: center;
-                    margin-left: 50px;
-                }
+    width: 220px;
+    background-color: #F5E1DC;
+    color: #E0BA76;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0; 
+    position: fixed; 
+    top: 20px; 
+    left: 0;
+    height: calc(100vh - 40px); 
+    overflow-y: auto; 
+}
                 
                 .sidebar h2 {
                     font-size: 22px;
@@ -54,18 +60,16 @@ class CategorySidebar extends HTMLElement {
                 }
                 
                 .product-section {
-                    flex-grow: 1;
-                    margin-left: 20px;
-                }
-                
-                .product-section h1 {
-                    font-size: 26px;
-                    color: #222;
-                    text-align: center;
-                    margin-bottom: 30px;
-                    margin-top: 10px;
-                }
-                
+                flex-grow: 1;
+                margin-left: 250px;
+
+               .product-section h1 {
+                font-size: 26px;
+                 color: #222;
+              text-align: center;
+            margin-bottom: 30px;
+             margin-top: 10px;
+             }
                 .product-list {
                     display: flex;
                     flex-wrap: wrap;
