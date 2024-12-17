@@ -3,10 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>componenttoi heseg</title>
+    <title>Component-той хэсэг</title>
   </head>
   <body>
-    <header-component style="position: fixed; width: 100%; margin-top: -24px; z-index: 10;"></header-component>
+    <header-component
+      style="position: fixed; width: 100%; margin-top: -24px; z-index: 10;"
+    ></header-component>
     <main>
       <aside>
         <category-sidebar></category-sidebar>
@@ -15,6 +17,7 @@
         <product-list></product-list>
       </section>
     </main>
+    <sags-component></sags-component>
     <product-modal></product-modal>
     <footer-component></footer-component>
   </body>
@@ -24,13 +27,14 @@
     import "./components/categorySideBar.js";
     import "./components/productList.js";
     import "./components/productModal.js";
+    import "./components/sags.js";
   </script>
   <style>
-    
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     main {
       min-height: 80vh !important;
