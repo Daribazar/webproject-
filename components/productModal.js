@@ -30,6 +30,7 @@ class ProductModal extends HTMLElement {
       this.openModal(event.detail);
     });
   }
+  
 
   render() {
     this.shadowRoot.innerHTML = `
@@ -64,6 +65,15 @@ class ProductModal extends HTMLElement {
           width: 100%;
           height: auto;
         }
+          .btn {
+        display: inline-block;
+         background-color: #D8A7A1;
+        color: black;
+       padding: 0.75rem 1.5rem;
+       text-decoration: none;
+       border-radius: 4px;
+       transition: background-color 0.3s;
+  }
       </style>
       <div id="product-modal" class="modal">
         <div class="modal-content">
@@ -72,6 +82,7 @@ class ProductModal extends HTMLElement {
           <img id="modal-image" alt="Product Image" />
           <p id="modal-price"></p>
           <p id="modal-description"></p>
+          <a href="#" class="btn" onclick="addToCart(event)">Захиалах</a>
         </div>
       </div>
     `;
