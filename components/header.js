@@ -9,7 +9,7 @@ class HeaderComponent extends HTMLElement {
             padding: 0px;
             background-color: #D8A7A1;
             display: flex;
-            justify-content: space-around;
+            justify-content: space-aroundff;
             align-items: center;
             color: #3B1F1A;
             font-weight: italic;
