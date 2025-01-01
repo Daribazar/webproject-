@@ -26,9 +26,29 @@ class ProductModal extends HTMLElement {
       this.closeModal();
     });
 
+    // "Захиалах" товч дээр addToCart функц дуудаж байна
+    this.shadowRoot.querySelector(".btn").addEventListener("click", (event) => {
+      this.addToCart(event);
+    });
+
     document.addEventListener("product-click", (event) => {
       this.openModal(event.detail);
     });
+  }
+
+  addToCart(event) {
+    event.preventDefault();
+    const sagsComponent = document.querySelector("sags-component");
+
+    const product = {
+      name: this.shadowRoot.querySelector("#modal-title").textContent,
+      price: parseFloat(
+        this.shadowRoot.querySelector("#modal-price").textContent.replace(/[^0-9.]/g, "")
+      ),
+    };
+
+    sagsComponent.addToCart(product); // Сагсанд нэмэх функц
+    this.closeModal();
   }
 
   render() {
@@ -64,6 +84,16 @@ class ProductModal extends HTMLElement {
           width: 100%;
           height: auto;
         }
+        .btn {
+          display: inline-block;
+          background-color: #D8A7A1;
+          color: black;
+          padding: 0.75rem 1.5rem;
+          text-decoration: none;
+          border-radius: 4px;
+          transition: background-color 0.3s;
+          cursor: pointer;
+        }
       </style>
       <div id="product-modal" class="modal">
         <div class="modal-content">
@@ -72,10 +102,10 @@ class ProductModal extends HTMLElement {
           <img id="modal-image" alt="Product Image" />
           <p id="modal-price"></p>
           <p id="modal-description"></p>
+          <a href="#" class="btn">Захиалах</a>
         </div>
       </div>
     `;
   }
 }
-
 customElements.define("product-modal", ProductModal);

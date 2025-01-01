@@ -17,7 +17,7 @@ class ProductList extends HTMLElement {
       this.products = await response.json();
       this.renderProducts(this.products);
     } catch (error) {
-      console.error("Failed to load products:", error);
+      console.error("error", error);
     }
   }
 
