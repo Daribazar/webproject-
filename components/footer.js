@@ -3,9 +3,8 @@ class FooterComponent extends HTMLElement {
     super();
     const shadow = this.attachShadow({ mode: "open" });
     shadow.innerHTML = `
-        <footer>
-
-    <style>
+    <footer>
+      <style>
         footer {
         background: #9a7c7c;
         color: #171616;
@@ -90,6 +89,7 @@ class FooterComponent extends HTMLElement {
             <a href="#"><img src="twitter-icon.png" alt="Twitter" width="20" height="20"></a>
             <a href="#"><img src="instagram-icon.png" alt="Instagram" width="20" height="20"></a>
             <a href="#"><img src="linkedin-icon.png" alt="LinkedIn" width="20" height="20"></a>
+           <a href="sanalhuselt.html">Санал хүсэлт</a>
         </div>
 
         <div class="footer-section contact">
