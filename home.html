@@ -1,139 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page</title>
-    <style> 
- body {
-            font-family: Arial, sans-serif;
-            background-color: #D8A7A1;
-            color: #3B1F1A;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container{
-            flex: 1;
-        }
-
-        .main-banner {
-            margin-top: 20px;
-            padding: 50px 0;
-            text-align: center;
-            width: 100%;
-            height: 300px;
-            background-size: cover;
-            background-position: center;
-            color: #3B1F1A;
-            position: relative;
-            transition: background-image 1s ease-in-out;
-        }
-
-        .main-banner h1 {
-            font-size: 48px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #3B1F1A;
-            font-family: cursive;
-        }
-
-        .main-banner p {
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: #3B1F1A;
-            font-family: cursive;
-        }
-
-        .main-banner .btn {
-            padding: 15px 30px;
-            background-color: #3B1F1A;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 18px;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-
-        .main-banner .btn:hover {
-            background-color: #7B4B47;
-        }
-
-        .product-section {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-top: -10px;
-            margin-bottom: 80px;
-        }
-
-        .product-card {
-            width: 200px;
-            text-align: center;
-            padding: 20px;
-            background-color: #F5E1DC;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.2s;
-        }
-
-        .product-card:hover{
-            transform: scale(1.05);
-        }
-
-        .product-card img {
-            width: 100%;
-            border-radius: 10px;
-        }
-
-        .product-card h3 {
-            font-size: 20px;
-            margin: 15px 0;
-            color: #3B1F1A;
-        }
-
-        .product-card p {
-            font-size: 16px;
-            color: #3B1F1A;
-        }
-    </style>
-</head>
-<body>
-    <header-component> </header-component>
+  </head>
+  <body>
+    <header-component
+      style="position: fixed; width: 100%; z-index: 10"
+    >
+    </header-component>
     <div class="container">
-        <section class="main-banner" id="main-banner">
-            <h1>Taste the original cookies</h1>
-            <p>Experience the best quality and taste.</p>
-            <button class="btn">Learn More</button>
-        </section>
-        <section class="product-section">
-            <div class="product-card">
-                <img src="/image/u.jpg" alt="Handmade Pretzels">
-                <h3>Handmade Pretzels</h3>
-                <p>Traditional pretzels with a touch of honey</p>
-            </div>
-            <div class="product-card">
-                <img src="/image/u.jpg" alt="Wheat Cookies">
-                <h3>Wheat Cookies</h3>
-                <p>Traditional cookies with chocolate particles</p>
-            </div>
-            <div class="product-card">
-                <img src="/image/r.jpg" alt="Sesame Cookies">
-                <h3>Sesame Cookies</h3>
-                <p>Wheat cookies made like by your Grandma</p>
-            </div>
-        </section>
+      <section class="main-banner" id="main-banner">
+        <h1>Taste the original cookies</h1>
+        <p>Experience the best quality and taste.</p>
+        <button class="btn">Learn More</button>
+      </section>
+      <section class="product-section">
+        <div class="product-card">
+          <img src="/image/u.jpg" alt="Handmade Pretzels" />
+          <h3>Handmade Pretzels</h3>
+          <p>Traditional pretzels with a touch of honey</p>
+        </div>
+        <div class="product-card">
+          <img src="/image/u.jpg" alt="Wheat Cookies" />
+          <h3>Wheat Cookies</h3>
+          <p>Traditional cookies with chocolate particles</p>
+        </div>
+        <div class="product-card">
+          <img src="/image/r.jpg" alt="Sesame Cookies" />
+          <h3>Sesame Cookies</h3>
+          <p>Wheat cookies made like by your Grandma</p>
+        </div>
+      </section>
     </div>
-</body>
-<footer-component></footer-component>
+  </body>
+  <footer-component></footer-component>
 </html>
 
 <script type="module">
-import "./components/header.js"
-import "./components/footer.js"
+  import "./components/header.js";
+  import "./components/footer.js";
 </script>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #d8a7a1;
+    color: #3b1f1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    flex: 1;
+  }
+
+  .main-banner {
+    margin-top: 20px;
+    padding: 50px 0;
+    text-align: center;
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    color: #3b1f1a;
+    position: relative;
+    transition: background-image 1s ease-in-out;
+  }
+
+  .main-banner h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #3b1f1a;
+    font-family: cursive;
+  }
+
+  .main-banner p {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #3b1f1a;
+    font-family: cursive;
+  }
+
+  .main-banner .btn {
+    padding: 15px 30px;
+    background-color: #3b1f1a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  .main-banner .btn:hover {
+    background-color: #7b4b47;
+  }
+
+  .product-section {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: -10px;
+    margin-bottom: 80px;
+  }
+
+  .product-card {
+    width: 200px;
+    text-align: center;
+    padding: 20px;
+    background-color: #f5e1dc;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+  }
+
+  .product-card:hover {
+    transform: scale(1.05);
+  }
+
+  .product-card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .product-card h3 {
+    font-size: 20px;
+    margin: 15px 0;
+    color: #3b1f1a;
+  }
+
+  .product-card p {
+    font-size: 16px;
+    color: #3b1f1a;
+  }
+</style>
