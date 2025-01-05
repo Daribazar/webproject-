@@ -13,13 +13,18 @@ class ProductList extends HTMLElement {
 
   async loadProducts() {
     try {
-      const response = await fetch("http://192.168.0.102:3000/product/all", {
+      const response = await fetch("http://localhost:3000/product/all", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
         },
       });
-      // const response = await fetch('products.json');
+      // const response = await fetch("http://192.168.0.102:3000/product/all", {
+      //   method: "GET",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      // });
       this.products = await response.json();
       this.renderProducts(this.products);
     } catch (error) {
