@@ -6,6 +6,9 @@
     <title>Нэвтрэх</title>
 </head>
 <body >
+    <div id="theme-switch" class="theme-switch">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 11.807A9.002 9.002 0 0 1 10.049 2a9.942 9.942 0 0 0-5.12 2.735c-3.905 3.905-3.905 10.237 0 14.142 3.906 3.906 10.237 3.905 14.143 0a9.946 9.946 0 0 0 2.735-5.119A9.003 9.003 0 0 1 12 11.807z"/></svg>
+    </div>
     <div class="glass-container">
         <div class="login-box">
             <h2>Нэвтрэх</h2>
@@ -21,7 +24,6 @@
 </html>
 
 <script type="module">
-
     let darkmode = localStorage.getItem('darkmode')
 
     const enableDarkmode = () => {
@@ -36,8 +38,7 @@
 
     if(darkmode === "active") enableDarkmode()
 
-    const themeswitch = document.getElementById('themeswitch')
-    themeswitch.addEventListener("click", () => {
+    document.getElementById('theme-switch').addEventListener("click", () => {
         darkmode = localStorage.getItem('darkmode')
         if(darkmode !== "active"){
             enableDarkmode()
@@ -154,6 +155,25 @@
     }
     #theme-switch svg{
         fill: var(--primary);
+    }
+
+    .theme-switch {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        z-index: 999;
+    }
+
+    .theme-switch svg {
+        width: 30px;
+        height: 30px;
+        fill: var(--text-color);
+        transition: 0.2s;
+    }
+
+    .theme-switch:hover svg {
+        transform: scale(1.2);
     }
 </style>
 
