@@ -30,12 +30,15 @@ class ProductList extends HTMLElement {
 renderProducts(products) {
   const productList = this.shadowRoot.querySelector(".product-list");
   productList.innerHTML = "";  
+  
+
 
   products.forEach((product) => {
     const productCard = document.createElement("product-card");
     productCard.setAttribute("image", product.image);
     productCard.setAttribute("name", product.name);
     productCard.setAttribute("price", product.price);
+    productCard.setAttribute("description", product.description);
 
     productList.appendChild(productCard);
   });
