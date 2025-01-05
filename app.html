@@ -5,20 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Component-той хэсэг</title>
   </head>
+
   <body>
     <header-component
       style="position: fixed; width: 100%; margin-top: -24px; z-index: 10;"
     ></header-component>
     <main>
-      <aside>
+      <aside>     
         <category-sidebar></category-sidebar>
       </aside>
+
+
       <section style="margin-top: 65px;">
         <product-list></product-list>
       </section>
+
     </main>
-    <sags-component></sags-component>
-    <product-modal></product-modal>
     <footer-component></footer-component>
   </body>
   <script type="module">
@@ -26,8 +28,7 @@
     import "./components/footer.js";
     import "./components/categorySideBar.js";
     import "./components/productList.js";
-    import "./components/productModal.js";
-    import "./components/sags.js";
+    import "./components/productCard.js"
   </script>
   <style>
     * {

@@ -13,12 +13,13 @@ class ProductList extends HTMLElement {
 
   async loadProducts() {
     try {
-      const response = await fetch("http://localhost:3000/product/all", {
+      const response = await fetch("http://192.168.0.102:3000/product/all", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
         },
       });
+      // const response = await fetch('products.json');
       this.products = await response.json();
       this.renderProducts(this.products);
     } catch (error) {
@@ -26,20 +27,19 @@ class ProductList extends HTMLElement {
     }
   }
 
-  renderProducts(products) {
-    const productList = this.shadowRoot.querySelector(".product-list");
-    productList.innerHTML = products
-      .map(
-        (product) => `
-          <div class="product-item" data-category="${product.category}">
-            <img src="${product.image}" alt="${product.name}">
-            <h3>${product.name}</h3>
-            <p>Үнэ: ${product.price}</p>
-          </div>
-        `
-      )
-      .join("");
-  }
+renderProducts(products) {
+  const productList = this.shadowRoot.querySelector(".product-list");
+  productList.innerHTML = "";  
+
+  products.forEach((product) => {
+    const productCard = document.createElement("product-card");
+    productCard.setAttribute("image", product.image);
+    productCard.setAttribute("name", product.name);
+    productCard.setAttribute("price", product.price);
+
+    productList.appendChild(productCard);
+  });
+}
 
   filterProducts(category) {
     const filteredProducts =
@@ -74,35 +74,18 @@ class ProductList extends HTMLElement {
   }
   render() {
     this.shadowRoot.innerHTML = `
-      <style>
-        .product-list {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 20px;
-          justify-content: center;
-          margin: 20px 250px;
-        }
-        .product-item {
-          width: 220px;
-          background-color: #f5e1dc;
-          border: 1px solid #e0ba76;
-          border-radius: 10px;
-          padding: 10px;
-          text-align: center;
-          cursor: pointer;
-          transition: transform 0.2s;
-        }
-        .product-item:hover {
-          transform: scale(1.05);
-        }
-        .product-item img {
-          width: 100%;
-          height: auto;
-          border-radius: 8px;
-          margin-bottom: 10px;
-        }
-      </style>
       <div class="product-list"></div>
+      <style>
+          .product-list {
+              margin-left: 250px;
+              margin-bottom: 50px;
+              display: flex;
+              flex-wrap: wrap;
+              gap: 20px;
+              justify-content: center;
+          }
+      </style>
+
     `;
   }
 }
