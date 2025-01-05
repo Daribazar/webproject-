@@ -8,7 +8,7 @@
 <body>
     <div class="glass-container">
         <h2>Бүртгүүлэх</h2>
-        <form action="login.html" method="post">
+        <form id="registerForm">
             <input type="text" name="username" placeholder="Нэвтрэх нэр" required>
             <input type="email" name="email" placeholder="Email" required>
             <input type="password" name="password" placeholder="Нууц үг" required>
@@ -16,6 +16,40 @@
             <p>Бүртгэл байгаа эсэх? <a href="login.html">Нэвтрэх</a></p>
         </form>
     </div>
+
+    <script>
+    document.getElementById('registerForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const formData = new FormData(e.target);
+        const data = {
+            username: formData.get('username'),
+            email: formData.get('email'),
+            password: formData.get('password')
+        };
+
+        try {
+            const response = await fetch('/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+
+            const result = await response.json();
+
+            if (!response.ok) {
+                throw new Error(result.error || 'amjiltgui');
+            }
+
+            alert('Бүртгэл амжилттай боллоо');
+            window.location.href = '/login';
+        } catch (error) {
+            alert(error.message);
+        }
+    });
+    </script>
 </body>
 </html>
 
