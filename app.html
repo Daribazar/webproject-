@@ -6,20 +6,20 @@
     <title>Component-той хэсэг</title>
   </head>
 
-<!-- //test -->
+  <!-- //test -->
   <body>
-    <header-component style="text-align: center;"></header-component>
+    <header-component
+      style="position: fixed; width: 100%; z-index: 10; margin-top: -20px;"
+    ></header-component>
     <main>
-      <aside>     
+      <aside>
         <category-sidebar></category-sidebar>
       </aside>
 
-
-      <section style="margin-top: 65px;">
+      <section style="margin-top: 65px">
         <cart-component></cart-component>
         <product-list></product-list>
       </section>
-
     </main>
     <footer-component></footer-component>
   </body>
@@ -28,8 +28,8 @@
     import "./components/footer.js";
     import "./components/categorySideBar.js";
     import "./components/productList.js";
-    import "./components/productCard.js"
-    import "./components/cart.js"
+    import "./components/productCard.js";
+    import "./components/cart.js";
   </script>
   <style>
     * {
