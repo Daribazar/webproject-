@@ -82,7 +82,6 @@ class FooterComponent extends HTMLElement {
                 <li><a href="#">Contact</a></li>
             </ul>
         </div>
-
         <div class="footer-section social">
             <h2>Follow Us</h2>
             <a href="#"><img src="facebook-icon.png" alt="Facebook" width="20" height="20"></a>

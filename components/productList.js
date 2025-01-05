@@ -13,7 +13,12 @@ class ProductList extends HTMLElement {
 
   async loadProducts() {
     try {
-      const response = await fetch("products.json");
+      const response = await fetch("http://localhost:3000/product/all", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
       this.products = await response.json();
       this.renderProducts(this.products);
     } catch (error) {
@@ -37,7 +42,10 @@ class ProductList extends HTMLElement {
   }
 
   filterProducts(category) {
-    const filteredProducts = category === "all" ? this.products : this.products.filter((product) => product.category === category);
+    const filteredProducts =
+      category === "all"
+        ? this.products
+        : this.products.filter((product) => product.category === category);
     this.renderProducts(filteredProducts);
   }
 
@@ -45,7 +53,9 @@ class ProductList extends HTMLElement {
     this.shadowRoot.addEventListener("click", (event) => {
       const target = event.target.closest(".product-item");
       if (target) {
-        const product = this.products.find((prod) => prod.name === target.querySelector("h3").textContent);
+        const product = this.products.find(
+          (prod) => prod.name === target.querySelector("h3").textContent
+        );
         if (product) {
           this.dispatchEvent(
             new CustomEvent("product-click", {
