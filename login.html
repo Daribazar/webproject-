@@ -163,12 +163,12 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
     
     const formData = new FormData(e.target);
     const data = {
-        username: formData.get('username'),
+        email: formData.get('username'),
         password: formData.get('password')
     };
 
     try {
-        const response = await fetch('/login', {
+        const response = await fetch('http://192.168.0.102:3000/users/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -186,7 +186,7 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
         localStorage.setItem('user', JSON.stringify(result.user));
         
         // Redirect to home page
-        window.location.href = '/home';
+        window.location.href = 'http://127.0.0.1:5500/home.html';
     } catch (error) {
         alert(error.message);
     }
