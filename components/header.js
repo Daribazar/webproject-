@@ -69,7 +69,7 @@ class HeaderComponent extends HTMLElement {
         </a>
         <nav>
             <a href="home.html">Нүүр</a>
-            <a href="bvteegdehvvn.html">Бүтээгдэхүүн</a>
+            <a href="app.html">Бүтээгдэхүүн</a>
             <a href="salbar.html">Салбарын мэдээлэл</a>
             <a href="login.html">Нэвтрэх</a>
         </nav>
