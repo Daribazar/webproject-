@@ -62,7 +62,7 @@ class HeaderComponent extends HTMLElement {
       </style>
       <header>
         <a href="home.html">
-            <img src="/image/1.png" alt="Company Logo" style="width: 90px; height: auto;">
+            <img src="/image/1.png" alt="Company Logo" style="width: 80px; height: auto;">
         </a>
         <nav>
             <a href="home.html">Нүүр</a>
