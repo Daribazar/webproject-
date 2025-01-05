@@ -9,10 +9,10 @@
     <div class="glass-container">
         <div class="login-box">
             <h2>Нэвтрэх</h2>
-            <form action="#" method="POST">
+            <form id="loginForm">
                 <input type="text" id="username" name="username" required placeholder="Нэр">
                 <input type="password" id="password" name="password" required placeholder="Нууц үг">
-                <button type="submit" onclick="window.location.href='home.html'">Нэвтрэх</button>
+                <button type="submit">Нэвтрэх</button>
                 <p>Бүртгэл байгаа эсэх? <a href="signup.html" id="register">Бүртгүүлэх</a></p>
             </form>
         </div>
@@ -156,3 +156,39 @@
         fill: var(--primary);
     }
 </style>
+
+<script>
+document.getElementById('loginForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const formData = new FormData(e.target);
+    const data = {
+        username: formData.get('username'),
+        password: formData.get('password')
+    };
+
+    try {
+        const response = await fetch('/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+
+        if (!response.ok) {
+            throw new Error(result.error || 'amjiltgui');
+        }
+
+        // Store user info in localStorage or session
+        localStorage.setItem('user', JSON.stringify(result.user));
+        
+        // Redirect to home page
+        window.location.href = '/home';
+    } catch (error) {
+        alert(error.message);
+    }
+});
+</script>
