@@ -1,72 +1,100 @@
 class ZahialgaComponent extends HTMLElement {
   constructor() {
     super();
+    this.attachShadow({ mode: 'open' });  // Shadow DOM үүсгэж байна
+
     // localStorage-аас cartItems болон cartTotal утгуудыг авч байна
     this.cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-    this.cartTotal = parseFloat(localStorage.getItem('cartTotal')) || 0;  // Тоон утгаар хөрвүүлж байна
+    this.cartTotal = parseFloat(localStorage.getItem('cartTotal')) || 0;  
     this.couponCode = '';  // Купон код
     this.discount = 0;  // Хөнгөлөлт
+
+    this.state = {  // Component state
+      cartItems: this.cartItems,
+      cartTotal: this.cartTotal,
+      couponCode: this.couponCode,
+      discount: this.discount
+    };
   }
 
   connectedCallback() {
     this.render();
     this.setupCouponHandler();
+    this.loadSavedFilters();
   }
 
   render() {
-    this.innerHTML = `
+    const template = document.createElement('template');
+    template.innerHTML = `
+      <style>
+        .discounted {
+          color: green;
+        }
+      </style>
       <h3>Таны сагс</h3>
       <ul>
-        ${this.cartItems.map(item => `<li>${item.name} - ₮${item.price}</li>`).join('')}
+        ${this.state.cartItems.map(item => `<li>${item.name} - ₮${item.price}</li>`).join('')}
       </ul>
 
       <section class="zahialga">
         <article>
           <h3>Захиалга</h3>
-          <h5 id="cart-total">Нийт: ₮${this.cartTotal}</h5>
+          <h5 id="cart-total">Нийт: ₮${this.state.cartTotal}</h5>
         </article>
         <article>
           <label for="coupon">Купон ашиглах:</label>
-          <input type="text" id="coupon" name="coupon" placeholder="Купон код оруулна уу">
+          <input type="text" id="coupon" name="coupon" placeholder="Купон код оруулна уу" value="${this.state.couponCode}">
           <button type="button" id="apply-coupon">Купон ашиглах</button>
         </article>
+        <article>
+          <label for="filter">Барааны шүүлтүүр:</label>
+          <select id="filter" name="filter">
+            <option value="all">Бүх бараа</option>
+            <option value="discounted">Хөнгөлөлттэй бараа</option>
+          </select>
+        </article>
       </section>
+
+      <slot></slot>
     `;
+
+    this.shadowRoot.appendChild(template.content.cloneNode(true));  
   }
 
   setupCouponHandler() {
-    const applyCouponButton = this.querySelector('#apply-coupon');
-    const couponInput = this.querySelector('#coupon');
+    const applyCouponButton = this.shadowRoot.querySelector('#apply-coupon');
+    const couponInput = this.shadowRoot.querySelector('#coupon');
     applyCouponButton.addEventListener('click', () => {
-      this.couponCode = couponInput.value.trim();
+      this.state.couponCode = couponInput.value.trim();
       this.applyCoupon();
     });
   }
 
   applyCoupon() {
-    // Купон кодыг шалгах логик (жишээ нь "DISCOUNT10")
-    if (this.couponCode === 'DISCOUNT10') {
-      this.discount = 0.1;  // 10% хөнгөлөлт
+    if (this.state.couponCode === 'DISCOUNT10') {
+      this.state.discount = 0.1;  
     } else {
-      this.discount = 0;
+      this.state.discount = 0;
     }
-
-    // Хөнгөлөлт хэрэглэх
-    const discountedPrice = this.cartTotal * (1 - this.discount);
-    this.cartTotal = discountedPrice;
-
-    // Хөнгөлөлттэй үнийн дүнг шинэчлэх
+    const discountedPrice = this.state.cartTotal * (1 - this.state.discount);
+    this.state.cartTotal = discountedPrice;
     this.render();
-
-    // Хөнгөлөлтийн мэдэгдэл
-    if (this.discount > 0) {
+    if (this.state.discount > 0) {
       alert('Купон код амжилттай ашиглагдлаа!');
     } else {
       alert('Купон код буруу байна.');
     }
+    localStorage.setItem('cartTotal', this.state.cartTotal);
+    localStorage.setItem('couponCode', this.state.couponCode);
+  }
 
-    // localStorage-д шинэ үнийн дүнг хадгалах
-    localStorage.setItem('cartTotal', this.cartTotal);
+  loadSavedFilters() {
+    const savedFilter = localStorage.getItem('savedFilter') || 'all';
+    const filterSelect = this.shadowRoot.querySelector('#filter');
+    filterSelect.value = savedFilter;
+    filterSelect.addEventListener('change', () => {
+      localStorage.setItem('savedFilter', filterSelect.value);
+    });
   }
 }
 
