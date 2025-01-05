@@ -5,7 +5,6 @@ class HeaderComponent extends HTMLElement {
 
     shadow.innerHTML = `
       <style>    
-
         header {
             width: 100%;
             padding: 0px;
@@ -61,11 +60,9 @@ class HeaderComponent extends HTMLElement {
             font-weight: bold;
         }
       </style>
-
-
       <header>
         <a href="home.html">
-            <img src="/image/Bakery Bread Illustration.png" alt="Company Logo" style="width: 80px; height: auto;">
+            <img src="/image/1.png" alt="Company Logo" style="width: 90px; height: auto;">
         </a>
         <nav>
             <a href="home.html">Нүүр</a>
