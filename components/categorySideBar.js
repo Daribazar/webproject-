@@ -167,4 +167,4 @@ document
   productList.filterProducts(event.detail.category);
 });
 
-customElements.define("category-sidebar", CategorySidebar);
+customElements.define("category-sidebar", CategorySidebar);        

@@ -1,18 +1,164 @@
 <!DOCTYPE html>
 <html lang="mn">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product Page</title>
-</head>
+  </head>
+
+  <body>
+    <div class="body">
+      <header>
+        <a href="home.html">
+          <img
+            src="/image/Bakery Bread Illustration.png"
+            alt="Company Logo"
+            style="width: 80px; height: auto"
+          />
+        </a>
+        <nav>
+          <a href="home.html">Нүүр</a>
+          <a href="bvteegdehvvn.html">Бүтээгдэхүүн</a>
+          <a href="salbar.html">Салбарын мэдээлэл</a>
+          <a href="login.html">Нэвтрэх</a>
+        </nav>
+        <div class="iconcard">
+          <svg
+            class="w-6 h-6 text-gray-800 dark:text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 10V6a3 3 0 0 1 3-3v0a3 3 0 0 1 3 3v4m3-2 .917 11.923A1 1 0 0 1 17.92 21H6.08a1 1 0 0 1-.997-1.077L6 8h12Z"
+            />
+          </svg>
+          <span id="cart-counter">0</span>
+        </div>
+      </header>
+
+      <div class="container">
+        <aside class="sidebar">
+          <h2>АНГИЛАЛ</h2>
+          <label for="category">Бүтээгдэхүүний төрөл:</label>
+          <select id="category">
+            <option value="all">Бүгд</option>
+            <option value="Dessert">Дессерт</option>
+            <option value="Cake">Бялуу</option>
+            <option value="Bread">Талх</option>
+            <option value="Salad">Салат</option>
+            <option value="Food">Хоол</option>
+          </select>
+        </aside>
+        <div class="product-section">
+          <div id="product-list" class="product-list"></div>
+        </div>
+      </div>
+
+      <div id="product-modal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <h2 id="modal-title">Product Title</h2>
+          <img id="modal-image" class="modal-image" />
+          <p id="modal-price">Product Price</p>
+          <p id="modal-description">Product Description</p>
+          <a href="#" class="btn" onclick="addToCart(event)">Захиалах</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="cardtab">
+      <h1>Shopping card</h1>
+      <div class="listcard">
+        <div id="cart-items"></div>
+        <div id="cart-total">Total: $0</div>
+      </div>
+      <div class="listbtn">
+        <button class="closee">CLOSE</button>
+        <button class="checkout">
+          <a href="zahialga.html">Захиалах</a>
+        </button>
+      </div>
+    </div>
+  </body>
+
+  <footer>
+    <style></style>
+    <div class="footer-container">
+      <div class="footer-section about">
+        <h2>About Us</h2>
+        <p>
+          We are a company dedicated to providing the best services to our
+          customers. Our goal is to enhance the experience of every user.
+        </p>
+      </div>
+      <div class="footer-section links">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section social">
+        <h2>Follow Us</h2>
+        <a href="#"
+          ><img src="facebook-icon.png" alt="Facebook" width="20" height="20"
+        /></a>
+        <a href="#"
+          ><img src="twitter-icon.png" alt="Twitter" width="20" height="20"
+        /></a>
+        <a href="#"
+          ><img src="instagram-icon.png" alt="Instagram" width="20" height="20"
+        /></a>
+        <a href="#"
+          ><img src="linkedin-icon.png" alt="LinkedIn" width="20" height="20"
+        /></a>
+      </div>
+
+      <div class="footer-section contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@company.com</p>
+        <p>Phone: +123 456 7890</p>
+        <p>Address: 123 Street Name, City, Country</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2023 Your Company Name. All rights reserved.</p>
+    </div>
+  </footer>
+</html>
+
+<script src="./scripts/index.js"></script>
+
+<script type="module">
+  import "./components/header.js";
+  import "./components/footer.js";
+  import "./components/categorySideBar.js";
+  import "./components/productList.js";
+  import "./components/productModal.js";
+  import "./components/sags.js";
+  import "./scripts/index.js";
+</script>
+
 <style>
-body{
+  body {
     margin: 0;
-}
-.body {
+  }
+  .body {
     font-family: Arial, sans-serif;
-    background-color: #D8A7A1;
-    color: #3B1F1A;
+    background-color: #d8a7a1;
+    color: #3b1f1a;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,102 +166,50 @@ body{
     margin: 0;
     padding: 0;
 }
-
-header {
-    width: 100%;
-    padding: 0px;
-    background-color: #D8A7A1;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    color: #3B1F1A;
-    font-weight: italic;
-    font-family: cursive;
-}
-
-header nav a {
-    margin: 0 15px;
-    color: #3B1F1A;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.2s;
-}
-
-header nav a:hover {
-    color: #7B4B47;
-}
-
-header .iconcard{
-    position: relative;
-    cursor: pointer;
-}
-
-header .iconcard span{
-    display: flex;
-    height: 25px;
-    width: 25px;
-    background-color: #F5E1DC;
-    justify-content: center;
-    align-items: center;
-    color: #000;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 .container {
     display: flex;
     width: 100%;
     margin: 20px auto;
 }
-
 .sidebar {
     width: 220px;
-    background-color: #F5E1DC;
-    color: #E0BA76;
+    background-color: #f5e1dc;
+    color: #e0ba76;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
     margin-left: 50px;
-}
+  }
 
-.sidebar h2 {
+  .sidebar h2 {
     font-size: 22px;
     margin-bottom: 20px;
-    border-bottom: 1px solid #E0BA76;
+    border-bottom: 1px solid #e0ba76;
     padding-bottom: 10px;
 }
-
 .category-list {
     list-style-type: none;
 }
-
 .category-list li {
     font-size: 16px;
     margin: 10px 0;
     cursor: pointer;
 }
-
 .category-list li:hover {
     color: #FFF;
 }
-
 .extra-info {
     margin-top: 20px;
     padding: 10px;
-    background-color: #E0BA76;
-    color: #D8A7A1;
+    background-color: #e0ba76;
+    color: #d8a7a1;
     border-radius: 5px;
     font-weight: bold;
 }
-
 .product-section {
     flex-grow: 1;
     margin-left: 20px;
 }
-
 .product-section h1 {
     font-size: 26px;
     color: #222;
@@ -123,57 +217,50 @@ header .iconcard span{
     margin-bottom: 30px;
     margin-top: 10px;
 }
-
 .product-list {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
 }
-
 .product-item {
     width: 220px;
-    background-color: #F5E1DC;
-    border: 1px solid #E0BA76;
+    background-color: #f5e1dc;
+    border: 1px solid #e0ba76;
     border-radius: 10px;
     padding: 10px;
     text-align: center;
     transition: transform 0.2s;
 }
-
 .product-item:hover{
     transform: scale(1.05);
 }
-
 .product-item img {
     width: 100%;
     height: auto;
     border-radius: 8px;
     margin-bottom: 10px;
 }
-
 .product-item h3 {
     font-size: 18px;
-    color: #D8A7A1;
+    color: #d8a7a1;
     margin-bottom: 5px;
 }
-
 .product-category {
     display: inline-block;
-    background-color: #E0BA76;
-    color: #FFF;
+    background-color: #e0ba76;
+    color: #fff;
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 14px;
     margin-bottom: 10px;
-}
+  }
 
-.description {
+  .description {
     font-size: 14px;
-    color: #D8A7A1;
+    color: #d8a7a1;
     margin-top: 10px;
 }
-
 .modal {
     display: none;
     display: none;
@@ -186,17 +273,16 @@ header .iconcard span{
     background-color: rgba(0, 0, 0, 0.5);
     overflow: auto;
 }
-
 .modal-image {
     width: 100%;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-right: 2rem;
-}
-.btn {
+  }
+  .btn {
     display: inline-block;
-    background-color: #D8A7A1;
+    background-color: #d8a7a1;
     color: black;
     padding: 0.75rem 1.5rem;
     text-decoration: none;
@@ -206,7 +292,6 @@ header .iconcard span{
   .btn:hover {
     background-color: white;
   }
-
 .modal-content {
     background-color: #fefefe;
     margin: 15% auto;
@@ -216,7 +301,6 @@ header .iconcard span{
     max-width: 500px;
     border-radius: 8px;
 }
-
 .close {
     color: #aaa;
     float: right;
@@ -224,74 +308,11 @@ header .iconcard span{
     font-weight: bold;
     cursor: pointer;
 }
-
 .close:hover,
 .close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
-}
-
-footer {
-    background: #9a7c7c;
-    color: #171616;
-    width: 100%;
-    text-align: center;
-    margin: 0;
-    position: relative;
-    box-sizing: border-box;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer-section {
-    width: 23%;
-    padding: 10px;
-    box-sizing: border-box;
-    color: #bbb;
-}
-
-.footer-section h2 {
-    margin-bottom: 15px;
-    font-size: 1.2em;
-    color: #f5f5f5;
-}
-
-.footer-section p, 
-.footer-section ul, 
-.footer-section a {
-    color: #bbb;
-    text-decoration: none;
-    font-size: 0.9em;
-}
-
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-section ul li {
-    margin: 5px 0;
-}
-
-.footer-section .social a {
-    margin: 0 10px;
-    display: inline-block;
-}
-
-.footer-bottom {
-    padding: 10px;
-    background: #463232;
-    font-size: 0.8em;
-    color: #bbb;
-    margin-bottom: 0;
 }
 .cardtab{
     width: 400px;
@@ -304,36 +325,36 @@ footer {
     z-index: 1000;
     height: 100vh;
     overflow-y: auto;
-}
-.cardtab h1{
+  }
+  .cardtab h1 {
     padding: 20px;
     margin: 0;
     font-weight: 300;
-}
-.cardtab .listbtn{
+  }
+  .cardtab .listbtn {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 5px;
-}
+  }
 
-.cardtab .listbtn button{
-    background-color: #D8A7A1;
+  .cardtab .listbtn button {
+    background-color: #d8a7a1;
     border: none;
     font-family: poppins;
     font-weight: 500;
     cursor: pointer;
 
-
+    
 }
 .cardtab .listbtn .closee{
     background-color: #F5E1DC;
     margin-right: 2.5px;
-}
-.cardtab .listbtn .checkout{
+  }
+  .cardtab .listbtn .checkout {
     margin-left: 2.5px;
-}
+  }
 
-.cart-item {
+  .cart-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -341,19 +362,16 @@ footer {
     border-bottom: 1px solid #eee;
     color: #fff;
 }
-
 #cart-total {
     padding: 15px;
     text-align: right;
     font-weight: bold;
     color: #fff;
 }
-
 .listcard {
     overflow-y: auto;
     padding: 10px;
 }
-
 .remove-btn {
     background-color: #353432;
     color: white;
@@ -364,28 +382,57 @@ footer {
     cursor: pointer;
     margin-left: 10px;
 }
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        margin: 10px;
+    }
+    .sidebar {
+        width: 90%;
+        margin: 10px auto;
+    }
+    .product-section {
+        margin: 10px;
+    }
 
+    .product-list {
+        gap: 15px;
+    }
+    .product-item {
+        width: calc(50% - 15px);
+        min-width: 140px;
+    }
+     .modal-content {
+        width: 95%;
+        margin: 10% auto;
+    }
+}
+@media screen and (max-width: 480px) {
+    .product-item {
+        width: 100%;
+    }
+    .cardtab {
+        width: 100%;
+    }
+    .modal-content {
+        margin: 5% auto;
+    }
+    .cardtab {
+        width: 100%;
+    }
+    .listcard {
+        padding: 5px;
+    }
+    .cart-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
 </style>
 <body>
     <div class="body">
-        <header>
-            <a href="home.html">
-                <img src="/image/Bakery Bread Illustration.png" alt="Company Logo" style="width: 80px; height: auto;">
-            </a>
-            <nav>
-                <a href="home.html">Нүүр</a>
-                <a href="bvteegdehvvn.html">Бүтээгдэхүүн</a>
-                <a href="salbar.html">Салбарын мэдээлэл</a>
-                <a href="login.html">Нэвтрэх</a>
-
-            </nav>
-            <div class="iconcard">
-                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 10V6a3 3 0 0 1 3-3v0a3 3 0 0 1 3 3v4m3-2 .917 11.923A1 1 0 0 1 17.92 21H6.08a1 1 0 0 1-.997-1.077L6 8h12Z"/>
-                </svg>
-                <span id="cart-counter">0</span>
-            </div>        
-        </header>
+<header-component></header-component>
         <div class="container">
             <aside class="sidebar">
                 <h2>АНГИЛАЛ</h2>
@@ -394,7 +441,7 @@ footer {
                     <option value="all">Бүгд</option>
                     <option value="Dessert">Дессерт</option>
                     <option value="Cake">Бялуу</option>
-                    <option value="Bread">Та��х</option>
+                    <option value="Bread">Талх</option>
                     <option value="Salad">Салат</option>
                     <option value="Food">Хоол</option>
                 </select>
@@ -424,50 +471,12 @@ footer {
             <button class="closee">
                 CLOSE
             </button>
-            <button class="checkout">
-                CHECKOUT
             <button class="checkout" >
                 <a href="zahialga.html">Захиалах</a>
             </button>
         </div>
     </div>
-    <footer>
-        <div class="footer-container">
-            <div class="footer-section about">
-                <h2>About Us</h2>
-                <p>We are a company dedicated to providing the best services to our customers. Our goal is to enhance the experience of every user.</p>
-            </div>
-            <div class="footer-section links">
-                <h2>Quick Links</h2>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-section social">
-                <h2>Follow Us</h2>
-                <a href="#"><img src="facebook-icon.png" alt="Facebook" width="20" height="20"></a>
-                <a href="#"><img src="twitter-icon.png" alt="Twitter" width="20" height="20"></a>
-                <a href="#"><img src="instagram-icon.png" alt="Instagram" width="20" height="20"></a>
-                <a href="#"><img src="linkedin-icon.png" alt="LinkedIn" width="20" height="20"></a>
-            </div>
-
-            <div class="footer-section contact">
-                <h2>Contact Us</h2>
-                <p>Email: info@company.com</p>
-                <p>Phone: +123 456 7890</p>
-                <p>Address: 123 Street Name, City, Country</p>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2023 Your Company Name. All rights reserved.</p>
-        </div>
-    </footer>
-    <script src="index.js"></script>
+    <script src="/scripts/index.js"></script>
 </body>
-</html>
-</html>
+<footer-component></footer-component>
+</html>          
