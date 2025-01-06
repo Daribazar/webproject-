@@ -65,11 +65,11 @@ class HeaderComponent extends HTMLElement {
       </style>
       <header>
           <a href="home.html">
-              <img src="/image/Bakery Bread Illustration.png" alt="Company Logo">
+              <img src="/image/1.png" alt="Company Logo">
           </a>
           <nav>
               <a href="home.html">Нүүр</a>
-              <a href="bvteegdehvvn.html">Бүтээгдэхүүн</a>
+              <a href="app.html">Бүтээгдэхүүн</a>
               <a href="salbar.html">Салбарын мэдээлэл</a>
               <a href="login.html">Нэвтрэх</a>
           </nav>      
