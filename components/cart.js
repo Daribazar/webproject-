@@ -223,8 +223,9 @@ class Cart extends HTMLElement {
       const orderButton = this.shadowRoot.querySelector(".order-btn");
       if (orderButton) {
         orderButton.addEventListener("click", () => {
-          alert("Захиалга хийлээ!");
-          this.toggleOverlay();
+          localStorage.setItem("cartItems", JSON.stringify(this.items)); // Сагсны өгөгдлийг хадгалах
+          localStorage.setItem("cartTotal", this.calculateTotalPrice()); // Нийт үнийг хадгалах
+          window.location.href = "zahialga.html"; // Захиалга руу шилжүүлэх
         });
       }
     }
