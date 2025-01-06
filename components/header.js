@@ -17,8 +17,8 @@ class HeaderComponent extends HTMLElement {
         }
 
         header a img {
-            width: 20px;
-            height: 20px;
+            width: 50px;
+            height: 50px;
         }
 
         header nav {
