@@ -6,7 +6,7 @@ class HeaderComponent extends HTMLElement {
     shadow.innerHTML = `
       <style> 
         header {
-            font-family: Arial, sans-serif;
+            font-family: cursive;
             background-color: #D8A7A1;
             color: #3B1F1A;
             display: flex;
