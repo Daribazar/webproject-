@@ -71,7 +71,7 @@ class FooterComponent extends HTMLElement {
     <div class="footer-container">
         <div class="footer-section about">
             <h2>About Us</h2>
-            <p>We are a company dedicated to providing the best services to our customers. Our goal is to enhance the experience of every user.</p>
+            <p>Амтлаг орцтой манай бүтээгдэхүүнийг сонирхон судалж, өөрийн дуртай амттангаа захиалаад аваарай.</p>
         </div>
         <div class="footer-section links">
             <h2>Quick Links</h2>
@@ -84,11 +84,11 @@ class FooterComponent extends HTMLElement {
         </div>
         <div class="footer-section social">
             <h2>Follow Us</h2>
-            <a href="#"><img src="facebook-icon.png" alt="Facebook" width="20" height="20"></a>
-            <a href="#"><img src="twitter-icon.png" alt="Twitter" width="20" height="20"></a>
-            <a href="#"><img src="instagram-icon.png" alt="Instagram" width="20" height="20"></a>
-            <a href="#"><img src="linkedin-icon.png" alt="LinkedIn" width="20" height="20"></a>
-           <a href="sanalhuselt.html">Санал хүсэлт</a>
+            <h5><a href="#"><img src="/image/f.png" alt="Facebook" width="20" height="20">facebook link</a></h5>
+            <h5><a href="#"><img src="/image/twitter.png" alt="Twitter" width="20" height="20">twitter link</a></h5>
+            <h5><a href="#"><img src="/image/instagram.png" alt="Instagram" width="20" height="20">instagram link</a></h5>
+            <h5><a href="#"><img src="/image/linkedin.png" alt="LinkedIn" width="20" height="20">linkedIn link</a></h5>
+            <h5><a href="sanalhuselt.html">Санал хүсэлт</a></h5>
         </div>
 
         <div class="footer-section contact">
@@ -100,7 +100,7 @@ class FooterComponent extends HTMLElement {
     </div>
 
     <div class="footer-bottom">
-        <p>&copy; 2023 Your Company Name. All rights reserved.</p>
+        <p>&copy;</p>
     </div>
 </footer>
         `;
