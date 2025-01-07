@@ -1,9 +1,9 @@
  // Бүтээгдэхүүний мэдээллийг JSON-оос татаж авах функц
  async function fetchProducts() {
     try {
-        const response = await fetch('products.json');
-        const products = await response.json();
-        renderProducts(products);
+        const response = await fetch('products.json'); // javascriptiin fetch api ashiglan http hvselt ilgeen ugugdliig tataj awah function
+        const products = await response.json();  //async vildl duustal shiglagdh ba json ugugdliig object helbert vvsgj bga helber
+        renderProducts(products); // product ugugdliig renderlen haruulah function
 
         // Ангиллын шүүлтүүрт үйлдэл нэмж оруулах
         const categorySelect = document.getElementById('category');
@@ -18,17 +18,17 @@
         categorySelect.value = categoryFromUrl;
         filterProducts(products, categoryFromUrl);
     } catch (error) {
-        console.error('Мэдээлэл татахад алдаа гарлаа:', error);
+        console.error('Мэдээлэл татахад алдаа гарлаа:', error); //aldaa barij awch bui heseg
     }
 }
 
 // Бүтээгдэхүүний жагсаалтыг харуулах функц
 function renderProducts(products) {
-    const productList = document.getElementById('product-list');
-    productList.innerHTML = '';
+    const productList = document.getElementById('product-list');//product-list id tai elementiig barij awj bn
+    productList.innerHTML = '';//tuhain elemntiig onooson utgaar haruulahin tuld hooslon dahin html bicij bn
 
-    products.forEach(product => {
-        const productDiv = document.createElement('div');
+    products.forEach(product => { //product array tus bvrt function duudaj uguud tuhain array bvrt tohiroh utguudig duudaj ugch bn
+        const productDiv = document.createElement('div');//shine div element vvsgej bn
         productDiv.classList.add('product-item');
         productDiv.innerHTML = `
             <img src="${product.image}" alt="${product.name}">
@@ -36,7 +36,7 @@ function renderProducts(products) {
             <p>Үнэ: ${product.price}</p>
         `;
         productDiv.addEventListener('click', () => showProductDetails(product));
-        productList.appendChild(productDiv);
+        productList.appendChild(productDiv);//shineer vvsgesen div elemtiig product-listed nemj bn
     });
 }
 
@@ -122,7 +122,7 @@ function addToCart(event) {
 } 
 
 function removeFromCart(index, event) {
-    // Үйл явдлын тархалтыг зогсоох
+    // event zogsooj bn
     event.stopPropagation();
     
     // Сагсны жагсаалтаас элемент устгах

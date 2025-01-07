@@ -22,7 +22,7 @@ class Cart extends HTMLElement {
       this.render();
     }
   
-    receiveItems(event) {
+    receiveItems(event) {// cartand baraa nemeh vyed tuhain ugugdliig awj bui vil ywts
       const productData = event.detail;
       console.log("Received product data:", productData);
       this.items.push(productData);
@@ -30,7 +30,7 @@ class Cart extends HTMLElement {
       this.render();
     }
   
-    removeItem(index) {
+    removeItem(index) {//tuhain baraag indexeer ni hasaj bn
       this.items.splice(index, 1); 
       this.saveItems(); 
       this.render(); 
@@ -41,14 +41,14 @@ class Cart extends HTMLElement {
     }
 
     loadItems() {
-      const storedItems = localStorage.getItem("cartItems");
+      const storedItems = localStorage.getItem("cartItems");//localstorage deer baraag hadgalj bn
       if (storedItems) {
         this.items = JSON.parse(storedItems);
       }
     }
 
     calculateTotalPrice() {
-      return this.items.reduce((total, item) => total + parseFloat(item.price), 0);
+      return this.items.reduce((total, item) => total + parseFloat(item.price), 0);//reduce ashiglan bvh vniig bodon hadgalj vniin dvng bucaaj bn
     }
   
     render() {

@@ -1,7 +1,7 @@
 class HeaderComponent extends HTMLElement {
   constructor() {
     super();
-    const shadow = this.attachShadow({ mode: "open" });
+    const shadow = this.attachShadow({ mode: "open" });// shadow Dom vvsgej bn mode ni open 
 
     shadow.innerHTML = `
       <style> 
@@ -76,7 +76,7 @@ class HeaderComponent extends HTMLElement {
       </header>
     `;
   }
-  connectedCallback() {
+  connectedCallback() {//card update hiigdehv vyd uurchllt hiih function 
     document.addEventListener("cart-updated", (event) => {
       this.updateCartInfo(event.detail);
     });
